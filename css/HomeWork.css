@@ -1,0 +1,287 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[class*="col-"] {
+  padding: 15px;
+  float: left;
+}
+
+.row::after {
+  float: left;
+  clear: both;
+  display: block;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100px;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+nav {
+  background: #807b6e;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+nav .site-nav a {
+  padding: 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+nav .site-nav a:hover {
+  background: #71f05d;
+  cursor: pointer;
+}
+
+header {
+  background: #71f05d;
+  text-align: center;
+  overflow: auto;
+  color: #ffffff;
+}
+
+header h2 {
+  padding: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+header p {
+  padding: 10px 0;
+}
+
+header button {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 15px;
+  margin: 15px;
+  border: none;
+  background: #2b302e;
+}
+
+header button:hover {
+  background: #f17ff5;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.card {
+  background-color: #346069;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  overflow: auto;
+}
+
+.card h4 {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+.content {
+  overflow: hidden;
+  margin: 15px 0;
+  background: #c9c7c7;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content h4 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content .text {
+  line-height: 30px;
+}
+
+.content:nth-child(odd) {
+  background: #fff;
+}
+
+.Pricing {
+  background: #c9c7c7;
+  overflow: auto;
+}
+
+.Pricing .price-header {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 25px auto;
+}
+
+.Pricing .pricing-shadow {
+  background: #fff;
+  text-align: center;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+.Pricing .pricing-shadow:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.Pricing .pricing-shadow .price-name {
+  padding: 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Pricing .pricing-shadow .price-value {
+  background: #28a158;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.Pricing .pricing-shadow .price-point {
+  line-height: 30px;
+}
+
+.Pricing .pricing-shadow .price-point .point {
+  padding: 15px 0;
+}
+
+.Pricing .pricing-shadow .price-button button {
+  background: #228f45;
+  padding: 15px 30px;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.5;
+          transition-duration: 0.5;
+}
+
+.Pricing .pricing-shadow .price-button button:hover {
+  background: #28a158;
+}
+
+.contact {
+  margin: 10px 0;
+}
+
+.contact .get-intouch {
+  margin: 30px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.contact p {
+  padding: 0 15px;
+  line-height: 20px;
+}
+
+.contact input, .contact textarea {
+  display: block;
+  padding: 15px;
+  margin-bottom: 5px;
+  width: 100%;
+  background: #cfe3e8;
+  border: none;
+}
+
+.contact button {
+  width: 100%;
+  background: #28a158;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+}
+
+footer {
+  background: #28a158;
+  overflow: auto;
+  padding: 20px 0;
+  clear: both;
+}
+
+footer div {
+  text-align: center;
+}
+
+footer .icons i {
+  font-size: 40px;
+  color: #fff;
+  padding: 0 5px;
+  margin: 0;
+}
+
+footer .copyright {
+  text-align: right;
+  font-size: 18px;
+  color: #fff;
+}
+/*# sourceMappingURL=HomeWork.css.map */

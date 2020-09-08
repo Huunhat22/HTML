@@ -1,0 +1,4 @@
+- Đối với những thẻ đứng trước có sử dụng thuộc tính Float thì thẻ đến sau phải sử dụng thuộc tính Clear để không bị lỗi chung 1 dòng.
+- Thuộc tính Display : thẻ inline thì sử dụng block hoặc inline-block, thẻ block thì sử dụn inline hoặc inline-block.
+- Thuộc tính Position : 
+

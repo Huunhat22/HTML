@@ -1,0 +1,9 @@
+Note của Trang Index và SCSS bài tập HTML:
+Class container : dùng để quy chuẩn trang web chuẩn mới và qui định chiều rộng của trang.
+
+ - Thẻ Padding : Nếu 4 giá trị thì : top, right,bottom,left
+	      : Nếu 3 giá trị thì : top,right and left,bottom
+	     : Nếu 2 giá trị thì : Top and bottom, Right and Left
+ 	    : Nếu 1 giá trị thì chia đều cho các Value
+
+- Thuộc tính Box-shadow :  là thuộc tính đổ bóng

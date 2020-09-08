@@ -1,0 +1,128 @@
+div{
+    border: 3px solid greenyellow;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+div.left{
+    float: left;
+}
+
+div.right{
+    float: right;
+}
+
+div.clear{
+    clear: both;
+}
+
+.hinhanh{
+    float:  right;
+    
+}
+.clear_fix{
+    overflow: auto;
+}
+
+.float{
+    float: left;
+    height: 70px;
+    width: 200px;
+    margin: 5px;
+}
+
+#shadow{
+    text-shadow: 2px 2px greenyellow;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    clear: both;
+    margin: 5px;
+}
+
+.boxshadow{
+    border-color: midnightblue;
+    height: 70px;
+    width: 200px;
+    font-size: 20px;
+    background-color: midnightblue;
+    box-shadow: 10px 10px 10px lawngreen;
+}
+
+.textoverflow{
+    color: orangered;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 400px;
+    white-space: nowrap;
+}
+
+.transition{
+    width: 300px;
+    height: 70px;
+    border-color: red;
+    background-color: red;
+    transition: width 5s;
+}
+
+div.transition:hover{
+    width: 500px;
+}
+
+.tranform{
+    background-color: orangered;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    float: left;
+    transition: width 2s ,height 2s , -webkit-transform 2s;
+}
+
+div.tranform:hover{
+    width: 350px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+
+@keyframes example{
+    0%{
+        background-color: #fc0303;
+        top: 0px;
+        
+    }
+    25%{
+        background-color: lawngreen;
+        top: 0px;
+        left: 500px;
+    }
+    50%{
+        background-color: #03fc84;
+        left: 500px;
+        top: 100px;
+    }
+    75%{
+        background-color: #03d3fc;
+        right: 500px;
+        top: 100px;
+    }
+    100%{
+        background-color: #ed79d4;
+        right: 0px;
+        top: 0px;
+    }
+}
+
+.tran_anima{
+    overflow: auto;
+}
+
+.animatioin{
+    animation-name: example;
+    animation-duration: 6s;
+    background-color: #fc0303;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    float: left;
+    position: relative;
+}

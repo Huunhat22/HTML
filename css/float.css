@@ -1,0 +1,110 @@
+#layout{
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    
+}
+.header{
+    width: 800px;
+    height: 100px;
+    background-color: yellow;
+    
+}
+.nav{
+    width: 200px;
+    height: 500px;
+    background-color: skyblue;
+    float: left;
+    
+}
+.detail{
+    width: 400px;
+    height: 500px;
+    background-color: tomato;
+    float: left;
+    
+}
+.banner{
+    width: 200px;
+    height: 500px;
+    background-color: grey;
+    float: left;
+}
+.footer{
+    width: 800px;
+    height: 100px;
+    background-color: blueviolet;
+    clear: both;
+}
+
+.khoangtrang{
+    height: 50px;
+}
+
+#layout2{
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+}
+.header2{
+    height: 100px;
+    width: 800px;
+    background-color: chartreuse;
+}
+.nav2{
+    height: 500px;
+    width: 200px;
+    float: left;
+}
+.nav3{
+    height: 200px;
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+.nav4{
+    height: 300px;
+    width: 200px;
+    background-color: darkgreen;
+}
+
+.detail2{
+    height: 500px;
+    width: 400px;
+    float: left;
+}
+.detail3{
+    height: 300px;
+    width: 400px;
+    background-color: darkorange;
+}
+
+.detail4{
+    height: 200px;
+    width: 400px;
+    background-color:springgreen;
+}
+
+.banner2{
+    height: 400px;
+    width: 200px;
+    float: left;
+}
+.banner3{
+    height: 400px;
+    width: 200px;
+    background-color: darkslategrey;
+}
+.banner4{
+    height: 100px;
+    width: 200px;
+    background-color: khaki;
+}
+
+.footer2{
+    height: 100px;
+    width: 800px;
+    background-color: darkviolet;
+    clear: both;
+    
+}

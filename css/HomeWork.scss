@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+[class*="col-"]{
+    padding: 15px;
+    float: left;
+}
+
+.row::after{
+    float: left;
+    clear: both;
+    display: block;
+}
+    // định nghĩa các chiều rộng cho các cột 
+    .col-1{ width: 8.33%;   }
+    .col-2{ width: 16.66%;   }
+    .col-3{ width: 25%;   }
+    .col-4{ width: 33.33%;   }
+    .col-5{ width: 41.66%;   }
+    .col-6{ width: 50%;   }
+    .col-7{ width: 58.33%;   }
+    .col-8{ width: 66.66%;   }
+    .col-9{ width: 75%;   }
+    .col-10{ width: 83.33%;   }
+    .col-11{ width: 91.66%;   }
+    .col-12{ width: 100px;   }
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+// Navigation
+
+nav{
+    background: #807b6e;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-size: 18px;
+    .site-nav{
+        a{
+            padding: 15px;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            &:hover{
+                background: #71f05d;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Header
+header{
+    background: #71f05d;
+    text-align: center;
+    overflow: auto;
+    color: #ffffff;
+    h2{
+        padding: 30px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    p{
+        padding: 10px 0;
+    }
+    button{
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        padding: 15px;
+        margin: 15px;
+        border: none;
+        background: #2b302e;
+        &:hover{
+            background: #f17ff5;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+    }
+}
+
+// Row Card
+.card{
+    background-color: #346069;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    overflow: auto;
+    h4{
+        font-weight: bold;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+}
+
+.content{
+    overflow: hidden;
+    margin: 15px 0;
+    background: #c9c7c7;
+    img{
+        width: 100%;
+    }
+    h4{
+        padding-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .text{
+        line-height: 30px;
+    }
+    &:nth-child(odd){
+        background: #fff;
+    }
+    
+}
+
+// Row Pricing
+.Pricing{
+    background: #c9c7c7;
+    overflow: auto;
+    .price-header{
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 25px auto;
+    }
+    .pricing-shadow{
+        background: #fff;
+        text-align: center;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+        .price-name{
+            padding: 20px 0;
+            font-size: 30px;
+            font-weight: bold;
+            
+        }
+        .price-value{
+            background: #28a158;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        .price-point{
+            line-height: 30px;
+            
+            .point{
+                padding: 15px 0;
+            }
+        }
+        .price-button{
+            button{
+                background: #228f45;
+                padding: 15px 30px;
+                border: none;
+                color: #fff;
+                font-size: 30px;
+                font-weight: bold;
+                margin: 10px 0;
+                border-radius: 3px;
+                transition-duration: 0.5;
+                &:hover{
+                    background: #28a158;
+                }
+            }
+        }
+    }
+}
+
+// Contact Row
+.contact{
+    margin: 10px 0;
+    .get-intouch{
+        margin: 30px auto;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    p{
+        padding: 0 15px;
+        line-height: 20px;
+    }
+    input, textarea{
+        display: block;
+        padding: 15px;
+        margin-bottom: 5px;
+        width: 100%;
+        background: #cfe3e8;
+        border: none;
+    }
+    button{
+        width: 100%;
+        background: #28a158;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        font-size: 30px;
+        color: #fff;
+    }
+}
+
+// Footer 
+footer{
+    background: #28a158;
+    overflow: auto;
+    padding: 20px 0;
+    clear: both;
+    div{
+        text-align: center;
+    }
+    .icons{
+        i{
+            font-size: 40px;
+            color: #fff;
+            padding: 0 5px;
+            margin: 0;
+        }
+    }
+    .copyright{
+        text-align: right;
+        font-size: 18px;
+        color: #fff;
+    }
+}

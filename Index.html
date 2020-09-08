@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav id="side-nav">
+        <i class="fas fa-bars" onclick="open_nav();"></i>
+        <div class="side-nav">
+            <a href="javascript:;" onclick="close_nav();" class="close">Close <i class="fas fa-times"></i></a>
+            <a href="home">Home</a>
+            <a href="blog">Blog</a>
+            <a href="shop">Shop</a>
+            <a href="news">News</a>
+            <a href="comtact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <h2>Thousand Sunny is ultimate version</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore animi id, explicabo dolorum quia totam illo. Fugit repudiandae inventore, voluptates ipsum suscipit beatae, dolor nemo, saepe nam laboriosam incidunt odit.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis possimus, iste nihil aliquam reprehenderit fuga eum voluptatum tempore illo assumenda animi ex vel omnis dicta porro! Consequuntur sit maxime a.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptas in eligendi, quam necessitatibus provident delectus reprehenderit nostrum vitae, illum commodi nam dolores eius rerum exercitationem recusandae! Labore, libero eaque?</p>
+                <button>LEARN MORE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Row Card -->
+    <div class="row card">
+        <div class="container">
+            <div class="col-4">
+                <div>
+                    <h4>Tutorial 1</h4>
+                    <i class="fa fa-desktop" aria-hidden="true" style="font-size: 120px;"></i>
+                    <p>Build in responsiveness</p>
+                    <p>Mobile first fluid grid</p>
+                    <p>Fits any Screen sizes</p>
+                    <p>PC Tablet and Mobile</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div>
+                    <h4>Tutorial 2</h4>
+                    <i class="fa fa-desktop" aria-hidden="true" style="font-size: 120px;"></i>
+                    <p>Build in responsiveness</p>
+                    <p>Mobile first fluid grid</p>
+                    <p>Fits any Screen sizes</p>
+                    <p>PC Tablet and Mobile</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div>
+                    <h4>Tutorial 3</h4>
+                    <i class="fa fa-desktop" aria-hidden="true" style="font-size: 120px;"></i>
+                    <p>Build in responsiveness</p>
+                    <p>Mobile first fluid grid</p>
+                    <p>Fits any Screen sizes</p>
+                    <p>PC Tablet and Mobile</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row content">
+        <div class="container">
+            <div class="col-4">
+                <img src="./hinhanh/SunnyThousand.jpg" alt="">
+            </div>
+            <div class="col-8 text">
+                <h4>Designing Responsive  Layout</h4>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam laboriosam earum magnam aperiam, distinctio corrupti repellat omnis! Assumenda nisi minima necessitatibus ipsa eius aut unde sapiente amet vel iusto? Nobis!
+
+            </div>
+        </div>
+    </div>
+    <div class="row content content-even">
+            <div class="container">       
+                <div class="col-8 text">
+                    <h4>Designing Responsive  Layout</h4>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam laboriosam earum magnam aperiam, distinctio corrupti repellat omnis! Assumenda nisi minima necessitatibus ipsa eius aut unde sapiente amet vel iusto? Nobis!
+                </div>
+                <div class="col-4">
+                    <iframe width="360" height="250" src="https://www.youtube.com/embed/ynXlqva1dHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>   
+    </div>
+    <div class="row content">
+        <div class="container">
+            <div class="col-4">
+                <img src="./hinhanh/onepice.png" alt="One Piece">
+            </div>
+            <div class="col-8 text">
+                <h4>Designing Responsive  Layout</h4>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam laboriosam earum magnam aperiam, distinctio corrupti repellat omnis! Assumenda nisi minima necessitatibus ipsa eius aut unde sapiente amet vel iusto? Nobis!
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Row Pricing -->
+
+    <div class="row pricing">
+        <div class="container">
+            <p class="price-header">Pricing Table</p>
+            <div class="col-4">
+                <div class="price-shadow">
+                    <div class="price-name">
+                        BASIC
+                    </div>
+                    <div class="price-value">
+                        <p>15,99$/Month</p>
+                    </div>
+                    <div class="price-point">
+                        <p class="point">10GB Space Amount</p>
+                        <p class="point">Unlimited Users</p>
+                        <p class="point">30GB Bandwidth</p>
+                        <p class="point">Enhanced Security</p>
+                        <p class="point">20 MySQL Database</p>
+                        <p class="point">25 Projects</p>
+                        <p class="point">Unlimited Domain</p>
+                    </div>
+                    <div class="price-button">
+                        <button type="button" class="button-green">BUY</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="price-shadow">
+                    <div class="price-name">
+                        MEDIUM
+                    </div>
+                    <div class="price-value">
+                        <p>35,99$/Month</p>
+                    </div>
+                    <div class="price-point">
+                        <p class="point">10GB Space Amount</p>
+                        <p class="point">Unlimited Users</p>
+                        <p class="point">30GB Bandwidth</p>
+                        <p class="point">Enhanced Security</p>
+                        <p class="point">20 MySQL Database</p>
+                        <p class="point">25 Projects</p>
+                        <p class="point">Unlimited Domain</p>
+                    </div>
+                    <div class="price-button">
+                        <button type="button" class="button-green">BUY</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="price-shadow">
+                    <div class="price-name">
+                        PROFESSTIONAL
+                    </div>
+                    <div class="price-value">
+                        <p>59,99$/Month</p>
+                    </div>
+                    <div class="price-point">
+                        <p class="point">10GB Space Amount</p>
+                        <p class="point">Unlimited Users</p>
+                        <p class="point">30GB Bandwidth</p>
+                        <p class="point">Enhanced Security</p>
+                        <p class="point">20 MySQL Database</p>
+                        <p class="point">25 Projects</p>
+                        <p class="point">Unlimited Domain</p>
+                    </div>
+                    <div class="price-button">
+                        <button type="button" class="button-green">BUY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="row contact">
+        <div class="container">
+            <h4>GET IN TOUCH</h4>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto recusandae animi et atque tenetur praesentium quasi dignissimos dolores! Commodi vitae dignissimos veritatis reprehenderit debitis? Pariatur officia eos libero tempora iste.</P>
+            <div class="col-8">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <textarea rows="8" placeholder="Your Massage"></textarea>
+                <button>SUBMIT</button>
+            </div>
+            <DIV class="COL-4">
+                <img src="" alt="">
+                Sunny Towner Company <br>
+                118 Huynh Thien Loc - Tan Phu - HCM
+            </DIV>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="col-6 icons">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-google-plus-square"></i>
+       </div>
+       <div class="col-6 copyright">All rights resered @VHN</div>
+   </div>
+</footer>
+    
+
+    <!-- Script cho navigation -->
+    <script type="text/javascript">
+        function open_nav() {
+            var x = document.getElementById("side-nav");
+            x.classList.add('mobile-mod');
+        }
+        function close_nav() {
+            var x = document.getElementById("side-nav");
+            x.classList.remove('mobile-mod');
+        }
+    </script>
+</body>
+</html>

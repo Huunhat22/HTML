@@ -1,0 +1,32 @@
+.td{
+    border: 3px solid red;
+}
+
+.mr {
+    height: 40px;
+    border: 2px solid yellow;
+    background-color: olive;
+    border-radius: 6px;
+}
+
+#background {
+    height: 358px;
+    background: #ffffff url("../HTML/hinhanh/img_tree.png") no-repeat right top;
+    margin-right: 200px;
+}
+.inline-block{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+}
+
+.sticky{
+    border: 2px solid yellow ;
+    position: sticky;
+    margin: 50px;
+    padding: 5px;
+    top: 0;
+}

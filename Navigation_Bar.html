@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Navigtion </title>
     <link rel="stylesheet" href="./css/Navigation_Bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <i class="fa fa-bars" aria-hidden="true" onclick="opend_nav()"></i>
-        <div class="site-nav">
-            <a href="javascript:;" onclick="close_nav()" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
-            <a href="Home">home</a>
-            <a href="Service">service</a>
-            <a href="Contact">contact</a>
-            <a href="About">about</a>
-            <a href="Feedback">feedback</a>
-        </div>
+    <nav >
+        <div class="logo">SunLyo</div>
+        <ul>
+            <li>
+                <a href="Home">Home</a>
+            </li>
+            <li>
+                <a href="Future">Future</a>
+                <ul>
+                    <li><a href="Page">Page</a></li>
+                    <li><a href="Element">Element</a></li>
+                    <li><a href="Icons">Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Services">Services</a>
+                <ul>
+                    <li><a href="Web Design">Web Design</a></li>
+                    <li><a href="App Design">App Design</a></li>
+                    <li>
+                        <a href="More">More
+                            <i class="fa fa-plus" aria-hidden="true" style="font-size: 15px;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="submenu-1">SubMenu-1</a></li>
+                            <li><a href="submenu-1">SubMenu-2</a></li>
+                            <li><a href="submenu-1">SubMenu-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li><a href="Contact">Contact</a></li>
+        </ul>       
     </nav>
 </body>
 </html>

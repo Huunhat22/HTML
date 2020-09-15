@@ -24,30 +24,25 @@ nav::after{
 nav{
     .logo{
         float: left;
-        color: #ffffff;
-        font-size: 27px;
-        font-weight: 600;
+        font-size: 30px;
+        font-weight: bold;
         line-height: 70px;
-        padding-left: 60px;
-
+        margin-left: 50px;
+        
     }
     ul{
         float: right;
-        list-style: none;
-        margin-right: 40px;
+        margin-right: 50px;;
         position: relative;
         top: 15px;
         li{
             display: inline-block;
-            float: left;
-            // background: #1b1b1b;
+            list-style: none;
             margin: 0 5px;
-            
             a{
-                color: #ffffff;
                 text-decoration: none;
+                font-size: 20px;
                 padding: 8px 15px;
-                font-size: 18px;
                 line-height: 40px;
                 &:hover{
                     color: cyan;
@@ -58,42 +53,44 @@ nav{
             }
             ul{
                 position: absolute;
-                // top: 70px; lúc đầu sử dụng 70px, nhưng sau tăng lên 90px
                 top: 50px;
-                visibility: hidden;
+                // display: none sử dụng hove nên bỏ thuộc tính này
                 opacity: 0;
-                transition: top .3s;
-                // border-top: 3px solid cyan;
+                visibility: hidden;
                 li{
                     position: relative;
-                    margin: 0px;
                     width: 150px;
+                    margin: 0;
                     float: none;
                     display: list-item;
-                    border-bottom: 1px solid rgba(0,0,0,0.3);
-                    .fa{
-                        margin-left: 40px;
+                    border-bottom: 1px solid cyan;
+                    a{
+                        .fa{
+                            margin-left: 25px;
+                        }
                     }
                     ul{
+                        // display: none;
                         visibility: hidden;
-                        // border-top: none;
+                        
                         li{
+                            opacity: 1;
                             position: relative;
-                            top: -40px;
                             left: 150px;
-
+                            top: -40px;
                         }
+                       
                     }
                 }
             }
             &:hover{
                 > ul{
+                    transition:  0.5s;
                     top: 40px;
                     opacity: 1;
                     visibility: visible;
                     li{
-                        box-shadow: none;
-                        color: cyan;
+                       
                         &:hover{
                             > a{
                                 box-shadow: none;
@@ -103,10 +100,94 @@ nav{
                                 }
                             }
                         }
-                    }   
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+
+// Icon , checkbox, label khi Responsive
+.show, .icon,input{
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    nav{
+        .logo{
+            margin-left: 20px;;
+            width: 100%;
+        }
+        .icon{
+            line-height: 70px;
+            display: block;
+            right: 40px;
+            position: absolute;
+            cursor: pointer;
+            font-size: 25px;
+            color: #ffffff;
+        }
+        ul{
+            margin-right: 0px;
+            float: left;
+            li{
+                display: block;
+                width: 100%;
+                position: relative;
+                a{
+                    &:hover{
+                        color: cyan;
+                        box-shadow: none;
+                    }
+                }
+                .show{
+                    display: block;
+                    color: #ffffff;
+                    font-size: 20px;
+                    padding: 8px 15px;
+                    cursor: pointer;
+                    &:hover{
+                        color: cyan;
+                    }
+                }
+                ul{
+                    position: static;
+                    top: 50px;
+                    float: none;
+                    display: none;
+                    opacity: 1;
+                    visibility: visible;
+                    li{
+                        padding-left: 40px;
+                        border-bottom: none;
+                        display: block;
+                        width: 100%;
+                        ul{
+                            visibility: visible;
+                            li{
+                                position: static;
+                                left: 60px;
+                            }
+                        }
+                       
+                    }
                 }
                 
             }
         }
+
+        // .show + a : là dùng để ẩn 2 thẻ a gần nhất liên tiếp 
+        // class = "show" và thẻ ul là cùng cấp với nên ẩn luôn
+        .show + a,ul {
+            display: none;
+        }
+
+        [id^=btn]:checked + ul{
+            display: block;
+        }
+        
+        
     }
 }

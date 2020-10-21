@@ -1,4 +1,21 @@
 - Đối với những thẻ đứng trước có sử dụng thuộc tính Float thì thẻ đến sau phải sử dụng thuộc tính Clear để không bị lỗi chung 1 dòng.
 - Thuộc tính Display : thẻ inline thì sử dụng block hoặc inline-block, thẻ block thì sử dụn inline hoặc inline-block.
-- Thuộc tính Position : 
+- Thuộc tính Position : static, absoutule , relative
 
+---------------------------------------------
+Nếu thuộc tính chỉ có một tham số thế này: flex: 1; thì ta hiểu đó là flex-grow.
+Nếu thuộc tính chỉ có một tham số có đơn vị độ dài như thế này: flex: 250px; thì ta hiểu đó là flex-basis.
+Nếu thuộc tính có hai tham số thế này: flex: 1 250px; thì ta hiểu đó là flex-grow và flex-basis.
+Nếu thuộc tính có hai tham số thế này: flex: 1 2; thì ta hiểu đó là flex-grow và flex-shrink.
+
+---------------------------------------------
+Công thức tính khi sử dụng flex box.
+nếu trong thẻ ul có 4 li. Tính khoảng cách giữa 4 li
+= ví dụ: đo khoảng cách giữa li là 30px , 4 thẻ thì 3 khoảng trắng là 30*3 = 90
+vì có 4 thẻ nên 90/4 = 22.5. width là 25%
+lấy 25% - 22.5 = 30px
+
+----------------------------------------------
+Quy cách đặt tên Class trong CSS (BEM)
+Block__Element--Modifier
+Ví Dụ:  Men__Leg--Tall , Men__Head--small

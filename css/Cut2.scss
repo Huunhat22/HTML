@@ -139,7 +139,7 @@ a{
 
 .category{
     &__list{
-        @include flex(center,space-between ,nowrap)
+        @include flex(stretch,space-between ,wrap)
     }
     &__item{
         width: calc(25% - 22.5px);
@@ -420,4 +420,148 @@ a{
         width: fit-content;
     }
 
+}
+
+//Responsive cho trang web
+@media screen and (max-width: 1023px){
+    .banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        &__heading{
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        &__desc{
+            font-size: 1.6rem;
+        }
+        &__buttons > .btn{
+            font-size: 1.4rem;
+        }
+    }
+    .category{
+        &__item{
+            width: calc(50% - 22.5px);
+            margin-bottom: 2.5rem;
+        }
+    }
+    .feature{
+        padding-top: 10rem;
+        &__item{
+            flex-direction: column;
+            margin-bottom: 8rem;
+            &:nth-child(even){
+                flex-direction: column;
+                .feature__infor{
+                    padding: 0;
+                }
+            }
+            &:nth-child(odd) .feature__infor{
+                padding: 0;
+            }
+        }
+        &__image,
+        &__infor{
+            width: 100%;
+        }
+        &__image img{
+            margin: 0 auto 5rem;
+        }
+    }
+    .partner{
+        &__title{
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+    .connect{
+        &__item{
+            width: calc(25% - 22.5px);
+        }
+        &__image{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}    
+
+@media screen and (max-width: 767px){
+    .header{
+        &__menu{
+            display:  none;
+        }
+    }
+    .category{
+        &__item{
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+    }
+    .partner{
+        margin-bottom: 5rem;
+        &__list{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+           width: 50%;
+           margin-bottom: 2rem;
+           img{
+               margin: 0 auto;
+           }
+        }
+    }
+    .connect{
+        margin-bottom: 5rem;
+        &__list{
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: calc(50% - 1rem);
+            margin-bottom: 2rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .subscribe{
+        &__container{
+            flex-direction: column;
+        }
+        &__title{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &__info{
+            width: 100%;
+        }
+    }
+    .footer{
+        &__container{
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    .banner{
+        &__heading{
+            font-size: 3rem;
+        }
+        &__buttons > .btn{
+            font-size: 1.2rem;
+        }
+    }
+    .footer{
+        &__item{
+            width: calc(25% - 10px);
+            .logo{
+                font-size: 1.6rem;
+            }
+        }
+    }
 }

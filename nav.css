@@ -22,7 +22,7 @@ a{
 header{
     position: sticky;
     top: 0px;
-    background-color: #60b4df;
+    background-color: #64df60;
     width: 100%;
     z-index: 1000;
 }
@@ -41,7 +41,8 @@ section{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(56, 165, 238, 0.5);
+    /* background-color: rgb(56, 165, 238, 0.5); */
+    background-color: rgba(56, 217, 238, 0.5);
 }
 
 .container{
@@ -53,25 +54,30 @@ section{
 }
 
 .logo-container{
-    flex: 1;
+    /* flex: 1; */
+    flex-grow: 1;
     display: flex;
     align-items: center;
 }
 
 .nav-btn{
-    flex: 3;
+    /* flex: 3; */
+    /* có thể thay thế flex : 3 bằng flex-grow : 1 */
+    flex-grow: 3;
     display: flex;
 }
 
 .nav-links{
-    flex: 2;
+    /* flex: 2; */
+    flex-grow: 1;
 }
 
 .log-sign{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
+    flex-grow: 1;
 }
 
 .logo{
@@ -128,7 +134,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: .5s;
+    transition: .5s linear;
 }
 
 .nav-link > a > i{
@@ -136,7 +142,7 @@ section{
 }
 
 .nav-link:hover > a{
-    transform: scale(1.1);
+     transform: scale(1.1);
 }
 
 .dropdown{

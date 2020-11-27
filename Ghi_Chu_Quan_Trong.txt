@@ -19,3 +19,28 @@ lấy 25% - 22.5 = 30px
 Quy cách đặt tên Class trong CSS (BEM)
 Block__Element--Modifier
 Ví Dụ:  Men__Leg--Tall , Men__Head--small
+---------------------------------------------
+object-fit :cover - > thuộc tính dùng để làm hình ảnh không bị méo khi nằm trong 1 thẻ
+overflow : hidden -> thuộc tính làm phần nội dung mất đi bị tràn
+text -overflow : ellipsis -> thuộc tính sẽ làm cho phần nội dung hiện dấu ...
+-webkit-box-orient: vertical -> Định dạng thành phần từ trên xuống dưới theo chiều dọc
+-webkit-box-orient: horirento -> Định dạng thành phần từ trái sang phải theo chiều ngang
+--------------------------------------------
+Kĩ thuật parallax -> tìm hiểu
+--------------------------------------------
+Vì là thẻ Img là inline-block
+Muốn cho ảnh nằm trong thẻ div và resize theo thẻ div thì : thẻ div phải set up : height = px , và thẻ Img set up : height : 100%  thì sẽ có kích thước vừa với thẻ Div
+--------------------------------------------
+Display : grid
+có các thuộc tính sau:
+grid-template-colums: mỗi giá trị là 1 cột
+grid-template-rows: mỗi giá trị là 1 cột
+grid-column-gap: khoảng cách giữa các cột
+grid-row-gap: khoảng cách giữa các hàng
+[short hand của 2 thuộc tính khoảng cách:
+grid-gap : khoảng cách cột khoảng cách hàng]
+grid-row-start và grid-column-start : là bắt đầu tại line
+grid-row-start và grid-column-start : kết thúc tại line
+[Short hand của grid-column: 1/3] : là begin-end
+[Short hand của grid-row: 1/3] : là begin-end
+

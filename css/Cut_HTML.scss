@@ -162,7 +162,6 @@ a{
     &__image{
         border-radius: inherit;
         @include size(100%, 23rem);
-
         //xử lý khi hình ảnh bị méo
         object-fit: cover;
 

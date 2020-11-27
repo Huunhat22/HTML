@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    background-color: rgba(43, 43, 119, 0.747);
+    padding: 5rem 8rem;
+    max-width: 500px;
+    height: 400px;
+    margin: 10rem auto;
+    border-radius: 3px;
+}
+.dropdown{
+    // background-color: rgba(43, 43, 119, 0.747);
+    // max-width: 500px;
+    // margin: auto;
+    // padding: 5rem 8rem;
+    border-radius: 2px;
+    position: relative;
+    &:hover{
+        cursor: pointer;
+        >.dropdown__list {
+            display: inline-block;
+        }
+    }
+    &__action{
+        padding: 1.7rem;
+        background: rgba(253, 93, 0, 0.952);
+        font-size: 1.3rem;
+        color: #ffffff;
+        border-radius: 3px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__list{
+        margin-top: 2.5rem;
+        border-radius: 3px;
+        background: rgba(253, 93, 0, 0.952);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        &::before{
+            content: "";
+            top: 0;
+            height: 2.5rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transform: translateY(-100%);
+        }
+    }
+
+    &__item{
+        padding: 1.7rem;
+        font-size: 1.3rem;
+        color: #ffffff;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        transition: background-color  .5s linear;
+        &:hover{
+            background-color: rgb(245, 161, 130);
+            cursor: pointer;
+        }
+        // tạo tam giác bằng before
+        &:first-child:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 3rem;
+            border-left: 10px solid  transparent;
+            border-right: 10px solid  transparent;
+            border-bottom: 10px solid  rgba(253, 93, 0, 0.952);
+            transform: translateY(-100%);
+            transition: border-bottom-color .5s linear;
+        }
+        &:first-child:hover::before{
+            border-bottom-color: rgb(245, 161, 130);
+        }
+        i{
+            font-size: 20px;
+        }
+    }
+}
+

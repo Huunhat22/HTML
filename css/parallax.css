@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+
+/* Set fullscreen */
+html, body {
+  height: 100%;
+}
+
+/* Section 1 --- full screen */
+/* CSS .section-1 */
+.section-1 {
+  background: url("../hinhanh/eiffel.jpg") no-repeat 50% 0 fixed;
+  height: 100%;
+  font-family: 'Sofadi One', cursive;
+  /* CSS .section-1 .greeting-content */
+}
+
+.section-1 .greeting-content {
+  max-width: 960px;
+  margin: 100px auto;
+  text-align: center;
+  /* CSS .section-1 .greeting-content h1,
+                    .section-1 .greeting-content h3 */
+  /* CSS .section-1 .greeting-content p */
+}
+
+.section-1 .greeting-content h1, .section-1 .greeting-content h3 {
+  color: #2c3e50;
+  font-size: 3.5em;
+}
+
+.section-1 .greeting-content p {
+  font-size: 2em;
+  background: rgba(231, 76, 60, 0.4);
+  padding: 20px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  /* CSS .section-1 .greeting-content p a */
+}
+
+.section-1 .greeting-content p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Section 2 */
+/* CSS .section-2 */
+.section-2 {
+  position: relative;
+  height: 800px;
+  max-width: 960px;
+  background: url("../hinhanh/bg.jpg") no-repeat 50% 0 fixed;
+  font-family: 'Elsie', cursive;
+  overflow: hidden;
+  /* CSS .section-2 #sherlock-img */
+  /* CSS .section-2 .sherlock */
+}
+
+.section-2 #sherlock-img {
+  position: absolute;
+  /* important */
+  margin: 0 auto;
+  z-index: 200;
+  right: 50px;
+}
+
+.section-2 .sherlock {
+  position: absolute;
+  /* important */
+  background: rgba(192, 57, 43, 0.8);
+  z-index: 100;
+  left: 100px;
+  width: 600px;
+  font-size: 18px;
+}
+
+/* Section 3 */
+/* CSS .section-3 */
+.section-3 {
+  position: relative;
+  height: 900px;
+  max-width: 960px;
+  background: url("../hinhanh/img_tree.png") no-repeat 50% 0 fixed;
+  font-family: 'Elsie', cursive;
+  overflow: hidden;
+  /* CSS .section-3 #steve-img */
+  /* CSS .section-3 .steve */
+}
+
+.section-3 #steve-img {
+  position: absolute;
+  /* important */
+  margin: 0 auto;
+  z-index: 200;
+  right: 0px;
+}
+
+.section-3 .steve {
+  position: absolute;
+  /* important */
+  font-size: 1em;
+  background: rgba(44, 62, 80, 0.8);
+  z-index: 100;
+  left: 50px;
+  width: 600px;
+  font-size: 20px;
+}
+/*# sourceMappingURL=parallax.css.map */

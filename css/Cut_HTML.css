@@ -187,6 +187,10 @@ a {
   padding: 2.5rem;
   background-color: #fafafa;
   border-radius: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,6 +226,14 @@ a {
 .category__item:nth-child(4) {
   -webkit-box-shadow: 0 20px 35px -5px rgba(255, 200, 122, 0.25);
           box-shadow: 0 20px 35px -5px rgba(255, 200, 122, 0.25);
+}
+
+.category__item:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  -webkit-box-shadow: -1px 20px 15px 4px rgba(0, 0, 0, 0.2), -1px 5px 3px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: -1px 20px 15px 4px rgba(0, 0, 0, 0.2), -1px 5px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 .category__image {
@@ -513,7 +525,52 @@ a {
 }
 
 .connect__item {
+  position: relative;
   width: calc(25% - 22.5);
+}
+
+.connect__item:hover > .connect__overlay {
+  bottom: 0;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.connect__image {
+  display: block;
+  border-radius: 25px;
+}
+
+.connect__overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+.connect__link {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1rem;
+  background-color: #15ff00;
+  border: none;
+  border-radius: 4px;
+  font-family: "poppins";
+  cursor: pointer;
+  z-index: 2;
 }
 
 .subscribe {

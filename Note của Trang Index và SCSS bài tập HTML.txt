@@ -6,4 +6,10 @@ Class container : dùng để quy chuẩn trang web chuẩn mới và qui địn
 	     : Nếu 2 giá trị thì : Top and bottom, Right and Left
  	    : Nếu 1 giá trị thì chia đều cho các Value
 
+- Thẻ Margin: Nếu 3 giá trị thì :
+Ví Dụ : margin: 25px 50px 75px;
+		top margin is 25px
+		right and left margins are 50px
+		bottom margin is 75px
+
 - Thuộc tính Box-shadow :  là thuộc tính đổ bóng

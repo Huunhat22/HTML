@@ -1,4 +1,46 @@
 - Đối với những thẻ đứng trước có sử dụng thuộc tính Float thì thẻ đến sau phải sử dụng thuộc tính Clear để không bị lỗi chung 1 dòng.
 - Thuộc tính Display : thẻ inline thì sử dụng block hoặc inline-block, thẻ block thì sử dụn inline hoặc inline-block.
-- Thuộc tính Position : 
+- Thuộc tính Position : static, absoutule , relative
+
+---------------------------------------------
+Nếu thuộc tính chỉ có một tham số thế này: flex: 1; thì ta hiểu đó là flex-grow.
+Nếu thuộc tính chỉ có một tham số có đơn vị độ dài như thế này: flex: 250px; thì ta hiểu đó là flex-basis.
+Nếu thuộc tính có hai tham số thế này: flex: 1 250px; thì ta hiểu đó là flex-grow và flex-basis.
+Nếu thuộc tính có hai tham số thế này: flex: 1 2; thì ta hiểu đó là flex-grow và flex-shrink.
+
+---------------------------------------------
+Công thức tính khi sử dụng flex box.
+nếu trong thẻ ul có 4 li. Tính khoảng cách giữa 4 li
+= ví dụ: đo khoảng cách giữa li là 30px , 4 thẻ thì 3 khoảng trắng là 30*3 = 90
+vì có 4 thẻ nên 90/4 = 22.5. width là 25%
+lấy 25% - 22.5 = 30px
+
+----------------------------------------------
+Quy cách đặt tên Class trong CSS (BEM)
+Block__Element--Modifier
+Ví Dụ:  Men__Leg--Tall , Men__Head--small
+---------------------------------------------
+object-fit :cover - > thuộc tính dùng để làm hình ảnh không bị méo khi nằm trong 1 thẻ
+overflow : hidden -> thuộc tính làm phần nội dung mất đi bị tràn
+text -overflow : ellipsis -> thuộc tính sẽ làm cho phần nội dung hiện dấu ...
+-webkit-box-orient: vertical -> Định dạng thành phần từ trên xuống dưới theo chiều dọc
+-webkit-box-orient: horirento -> Định dạng thành phần từ trái sang phải theo chiều ngang
+--------------------------------------------
+Kĩ thuật parallax -> tìm hiểu
+--------------------------------------------
+Vì là thẻ Img là inline-block
+Muốn cho ảnh nằm trong thẻ div và resize theo thẻ div thì : thẻ div phải set up : height = px , và thẻ Img set up : height : 100%  thì sẽ có kích thước vừa với thẻ Div
+--------------------------------------------
+Display : grid
+có các thuộc tính sau:
+grid-template-colums: mỗi giá trị là 1 cột
+grid-template-rows: mỗi giá trị là 1 cột
+grid-column-gap: khoảng cách giữa các cột
+grid-row-gap: khoảng cách giữa các hàng
+[short hand của 2 thuộc tính khoảng cách:
+grid-gap : khoảng cách cột khoảng cách hàng]
+grid-row-start và grid-column-start : là bắt đầu tại line
+grid-row-start và grid-column-start : kết thúc tại line
+[Short hand của grid-column: 1/3] : là begin-end
+[Short hand của grid-row: 1/3] : là begin-end
 

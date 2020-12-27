@@ -1,0 +1,567 @@
+*{
+    box-sizing: border-box;
+}
+
+$primary-color:#ffc87a;
+$text-color:    #1a2b5f;
+$text-gray:    #c6cad7;
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    color: $text-color;
+    line-height: 1.4;
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1210px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@mixin flex($align: flex-start, $justify:flex-start, $wrap: nowrap , $dir: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}
+
+@mixin size ($width, $height:$width){
+    width: $width;
+    height: $height;
+}
+.header{
+    padding-top: 4rem;
+    &__inner{
+        @include flex(center,space-between);
+    }
+    &__menu{
+        &-list{
+            @include flex(center);
+        }
+        &-item{
+            margin-left: 5rem;
+            &:last-child{
+                margin-left: 7rem;
+            };
+        }
+        &-link{
+            color: $text-color;
+            font-size: 1.6rem;
+            transition: color 0.3s linear;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-color;
+    text-decoration: none;
+    &__text{
+        color: $primary-color;
+    }
+}
+
+.banner{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 12rem 0;
+    text-align: center;
+    &__heading{
+        font-size: 6rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    &__desc{
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+        font-weight: 300;
+    }
+    &__buttons{
+        // @include flex(stretch,center);
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        .btn{
+            margin: 1rem;
+        }
+    }
+}
+
+.btn{
+    cursor: pointer;
+    outline: none;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $text-color;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border: 0;
+    background: transparent; // vi mot so trinh duyet backgroud cua buttom se co mau xam nen se rerest
+    &--border{
+        border: 1px solid currentColor;
+    }
+    &--rounded{
+        border-radius: 5rem;
+    }
+    &--primary{
+        background-color: $primary-color;
+        &.has-shadow{
+            box-shadow: -4px 3px 30px -5px #ffc87a;
+        }
+    }
+    // &--primary{
+    //     background-color: $primary-color;
+    //     &.has-shadow{
+    //         box-shadow: 0 10px 35px -5px $primary-color;
+    //     }
+    // }
+
+}
+
+.category{
+    &__list{
+        @include flex(stretch,space-between ,wrap)
+    }
+    &__item{
+        width: calc(25% - 22.5px);
+        padding: 2.5rem;
+        border-radius: 2rem;
+        background: #fafafa;
+        &:first-child{
+            box-shadow: -2px 14px 35px -6px rgba(255, 166, 0, 0.5);
+        }
+        &:nth-child(2){
+            box-shadow:0 20px 35px -5px rgba( 255, 112 , 109, 0.25);
+        }
+        &:nth-child(3){
+            box-shadow:0 20px 35px -5px rgba( 133, 152 , 255, 0.25);
+        }
+        &:last-child{
+            box-shadow:0 20px 35px -5px rgba( 255, 112 , 109, 0.25);
+        }
+    }
+    &__image{
+        border-radius: inherit;
+        object-fit: cover;
+        margin-bottom: 4rem;
+        @include size(100%, 23rem);
+    }
+    &__name{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    &__details{
+        font-size: 1.5rem;
+        color: $text-gray;
+        i{
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+.feature{
+    padding-top: 18rem;
+    &__item{
+        // @include flex(center,space-between);
+        display: flex;
+        align-items: center;
+        margin-bottom: 15rem;
+        &:nth-child(odd){
+            .feature__info{
+                padding-left: 10rem;
+            }
+        }
+        &:nth-child(even){
+            flex-direction: row-reverse; 
+            .feature__info{
+                padding-right: 10rem;
+            }
+        }
+        
+    }
+    &__image,
+    &__info{
+        width: 50%;
+    }
+    &__image{
+        img{
+            width: 100%;
+        }
+    }
+    &__title{
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+    }
+    &__desc{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        line-height: 1.8;
+    }
+    &-intro{
+        &__item{
+            padding-left: 3rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-decoration: underline;
+
+            &--circle{
+                text-decoration: none;
+                position: relative;
+                &::before{
+                    content: ""; // sử dụng before thì phải có thuộc tính content
+                    position: absolute;
+                    border-radius: 2rem;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    top: 0;
+                    left: 0;
+                    background-color: rgb(0, 255, 0);
+                    transform: translateY(50%);   
+                }
+                &:nth-child(2)::before{
+                    background-color: darkorange;
+                }
+                &:nth-child(3)::before{
+                    background-color: rgb(150, 0, 250);
+                }
+                &:nth-child(4)::before{
+                    background-color: rgb(255, 0, 0);
+                }
+            }
+
+        }
+
+    }
+    &-best{
+        &__list{
+            @include flex(flex-start,space-between,wrap);
+        }
+        &__item{
+            width: calc(50% - 3rem);
+            margin-bottom: 3rem;
+            i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &__icon{
+            @include size(5rem, 5rem);
+            font-size: 2rem;
+            border-radius: 4px;
+            color: darkorange;
+            position: relative;
+            margin-bottom: 1rem;
+            z-index: 1;
+
+            &--pupple{
+                color: rgb(197, 20, 197);
+            }
+            &--green{
+                color: rgb(5, 223, 16);
+            }
+            &--red{
+                color: rgb(255, 37, 37);
+            }
+
+            &:after{
+                content: "";
+                height: 100%;
+                width: 100%;
+                background-color: currentColor;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: inherit;
+                opacity: 0.25;
+            }
+        }
+        &__title{
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        &__desc{
+            font-weight: 300;
+            // white-space: nowrap;
+            // Nếu muốn đoạn text hiển thị theo số dòng mong muốn
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+             -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+        }
+
+    }
+}
+
+.partner{
+    margin-bottom: 19rem;
+    &__container{
+        max-width: 83rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__title{
+        font-size: 2.4rem;
+        font-weight: bold;
+        padding-bottom: 7rem;
+        margin-bottom: 7rem;
+        border-bottom: 1px solid $text-color;
+    }
+    &__list{
+        @include flex(center,space-between);
+    }
+    // &__item{
+    //     width: calc(25% - 3rem);
+    // }
+}
+
+.connect{
+    text-align: center;
+    margin-bottom: 17rem;
+    &__title{ 
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+    &__notice{
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 5rem;
+        span{
+            color: $primary-color;
+        }
+    }
+    &__list{
+        @include flex(center,space-between);
+    }
+}
+
+.subscribe{
+    margin-bottom: 5rem;
+    &__container{
+        @include flex(flex-start,space-between);
+        padding-bottom: 8rem;
+        border-bottom: 2px solid $text-color;
+    }
+    &__title,&__info{
+        width: 50%;
+    }
+    &__title{
+        font-size: 2rem;
+        font-weight: 700;
+        max-width: 43rem;
+    }
+    &__form{
+        background-color: #f2f1f6;
+        @include flex(center,space-between );
+        padding: 2rem;
+        margin-bottom: 3.5rem;
+    }
+    &__input,&__button{
+        padding: 0;
+    }
+    &__input{
+        border: 0;
+        outline: none;
+        font-size: 1.4rem;
+        background-color: transparent;
+        padding-right: 1.5rem;
+        font-family: "poppins";
+        flex-grow: 1;
+    }
+    &__button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    &__social i{
+        font-size: 20px;
+        margin-left: 4rem;
+    }
+    
+}
+
+.footer{
+    &__container{
+        @include flex(flex-start,space-between);
+    }
+    &__item{
+        width: 25%;
+    }
+    &__link{
+        color: $text-color;
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 1.5rem;
+        width: fit-content;
+    }
+
+}
+
+//Responsive cho trang web
+@media screen and (max-width: 1023px){
+    .banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        &__heading{
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        &__desc{
+            font-size: 1.6rem;
+        }
+        &__buttons > .btn{
+            font-size: 1.4rem;
+        }
+    }
+    .category{
+        &__item{
+            width: calc(50% - 22.5px);
+            margin-bottom: 2.5rem;
+        }
+    }
+    .feature{
+        padding-top: 10rem;
+        &__item{
+            flex-direction: column;
+            margin-bottom: 8rem;
+            &:nth-child(even){
+                flex-direction: column;
+                .feature__infor{
+                    padding: 0;
+                }
+            }
+            &:nth-child(odd) .feature__infor{
+                padding: 0;
+            }
+        }
+        &__image,
+        &__infor{
+            width: 100%;
+        }
+        &__image img{
+            margin: 0 auto 5rem;
+        }
+    }
+    .partner{
+        &__title{
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+    .connect{
+        &__item{
+            width: calc(25% - 22.5px);
+        }
+        &__image{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}    
+
+@media screen and (max-width: 767px){
+    .header{
+        &__menu{
+            display:  none;
+        }
+    }
+    .category{
+        &__item{
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+    }
+    .partner{
+        margin-bottom: 5rem;
+        &__list{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+           width: 50%;
+           margin-bottom: 2rem;
+           img{
+               margin: 0 auto;
+           }
+        }
+    }
+    .connect{
+        margin-bottom: 5rem;
+        &__list{
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: calc(50% - 1rem);
+            margin-bottom: 2rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .subscribe{
+        &__container{
+            flex-direction: column;
+        }
+        &__title{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &__info{
+            width: 100%;
+        }
+    }
+    .footer{
+        &__container{
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    .banner{
+        &__heading{
+            font-size: 3rem;
+        }
+        &__buttons > .btn{
+            font-size: 1.2rem;
+        }
+    }
+    .footer{
+        &__item{
+            width: calc(25% - 10px);
+            .logo{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

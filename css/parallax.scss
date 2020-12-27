@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+
+// .background{
+//     position: fixed;
+//     width: 100%;
+//     height: 500px;
+//     top: 0;
+//     z-index: -1;
+ 
+//     &-image{
+//         width: 100%;
+//         height: 500px;
+//         overflow: hidden;
+//         display: block;
+//         object-fit: cover;
+//     }
+// }
+
+// .container{
+//     max-width: 1200px;
+//     margin: 6rem auto;
+//     text-align: center;
+//     &-title{
+//         font-size: 3rem;
+//         font-weight: bold;
+//         color: #292925;
+//     }
+//     &-text{
+//         color: #ff0404;
+//         font-size: 1.5rem;
+        
+//     }
+//     &-article{
+//         opacity: 0.6;
+//         border-radius: 3px;
+//         border: 1px solid #aabed2;
+//         padding: 1.5rem 0;
+//         margin: 3rem auto;
+//         max-width: 800px;
+//         h4{
+//             font-size: 2.5rem;
+//             margin-bottom: 2rem;
+//             color: #292925;
+//         }
+        
+//     }
+// }
+// .margin-bottom{
+//     margin-bottom: 100vh;
+// }
+
+// Parallax version 2
+/* Set fullscreen */
+html, body {
+    height: 100%;
+}
+/* Section 1 --- full screen */
+/* CSS .section-1 */
+.section-1 {
+    background: url('../hinhanh/eiffel.jpg') no-repeat 50% 0 fixed;
+    height: 100%;
+    font-family: 'Sofadi One', cursive;
+
+    /* CSS .section-1 .greeting-content */
+    .greeting-content {
+            max-width: 960px;
+            margin: 100px auto;
+            text-align: center;
+
+            /* CSS .section-1 .greeting-content h1,
+                    .section-1 .greeting-content h3 */
+            h1, h3 {
+                    color: #2c3e50;
+                    font-size: 3.5em;
+            }
+
+            /* CSS .section-1 .greeting-content p */
+            p {
+                    font-size: 2em;
+                    background: rgba(231, 76, 60, 0.4);
+                    padding: 20px;
+                    border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -webkit-border-radius: 30px;
+
+                    /* CSS .section-1 .greeting-content p a */
+                    a {
+                            color: #fff;
+                            text-decoration: none;
+                    }
+            }
+    }
+}
+/* Section 2 */
+/* CSS .section-2 */
+.section-2 {
+    position: relative;
+    height: 800px;
+    max-width: 960px;
+    background: url('../hinhanh/bg.jpg') no-repeat 50% 0 fixed;
+    font-family: 'Elsie', cursive;
+    overflow: hidden;
+
+    /* CSS .section-2 #sherlock-img */
+    #sherlock-img {
+            position: absolute;     /* important */
+            margin: 0 auto;
+            z-index: 200;
+            right: 50px;
+    }
+
+    /* CSS .section-2 .sherlock */
+    .sherlock {
+            position: absolute;     /* important */
+            background: rgba(192, 57, 43, 0.8);
+            z-index: 100;
+            left: 100px;
+            width: 600px;
+            font-size: 18px;
+    }
+}
+/* Section 3 */
+/* CSS .section-3 */
+.section-3 {
+    position: relative;
+    height: 900px;
+    max-width: 960px;
+    background: url('../hinhanh/img_tree.png') no-repeat 50% 0 fixed;
+    font-family: 'Elsie', cursive;
+    overflow: hidden;
+
+    /* CSS .section-3 #steve-img */
+    #steve-img {
+            position: absolute;     /* important */
+            margin: 0 auto;
+            z-index: 200;
+            right: 0px;
+    }
+
+    /* CSS .section-3 .steve */
+    .steve {
+            position: absolute;     /* important */
+            font-size: 1em;
+            background: rgba(44, 62, 80, 0.8);
+            z-index: 100;
+            left: 50px;
+            width: 600px;
+            font-size: 20px;
+    }
+}

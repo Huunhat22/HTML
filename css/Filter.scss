@@ -19,7 +19,7 @@ body{
     margin: 20px;
     padding: 15px;
     position: absolute;
-    transform: translate(0px,0px);
+    // transform: translate(0px,0px);
     .input_text{
         border: none;
         background: none;
@@ -63,7 +63,7 @@ body{
     overflow: auto;
     width: 300px; 
     &:hover{
-        transition-duration: 0.5s;
+        transition-duration: color 0.5s;
         border: 1px;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -109,7 +109,7 @@ body{
         border: none;
         width: 100%;
         &:hover{
-            transition: .7s;
+            transition: color .7s;
             cursor: pointer;
             background: #35b13b;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);

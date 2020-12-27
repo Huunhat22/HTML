@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../hinhanh/eiffel.jpg) no-repeat;
+    
+    height: 100%;
+    background-size: cover;
+}
+
+nav::after{
+    clear: both;
+    float: left;
+    display: table;
+    content: '';
+}
+
+nav{
+    .logo{
+        float: left;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 70px;
+        margin-left: 50px;
+        
+    }
+    ul{
+        float: right;
+        margin-right: 50px;;
+        position: relative;
+        top: 15px;
+        li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+            a{
+                text-decoration: none;
+                font-size: 20px;
+                padding: 8px 15px;
+                line-height: 40px;
+                &:hover{
+                    color: cyan;
+                    border-radius: 5px;
+                    box-shadow: 0 0 5px #33ffff,
+                                0 0 5px #66ffff;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 50px;
+                // display: none sử dụng hove nên bỏ thuộc tính này
+                opacity: 0;
+                visibility: hidden;
+                li{
+                    position: relative;
+                    width: 150px;
+                    margin: 0;
+                    float: none;
+                    display: list-item;
+                    border-bottom: 1px solid cyan;
+                    a{
+                        .fa{
+                            margin-left: 25px;
+                        }
+                    }
+                    ul{
+                        // display: none;
+                        visibility: hidden;
+                        
+                        li{
+                            opacity: 1;
+                            position: relative;
+                            left: 150px;
+                            top: -40px;
+                        }
+                       
+                    }
+                }
+            }
+            &:hover{
+                > ul{
+                    transition:  0.5s;
+                    top: 40px;
+                    opacity: 1;
+                    visibility: visible;
+                    li{
+                       
+                        &:hover{
+                            > a{
+                                box-shadow: none;
+                                color: cyan;
+                                .fa{
+                                    color: cyan;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+
+// Icon , checkbox, label khi Responsive
+.show, .icon,input{
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    nav{
+        .logo{
+            margin-left: 20px;;
+            width: 100%;
+        }
+        .icon{
+            line-height: 70px;
+            display: block;
+            right: 40px;
+            position: absolute;
+            cursor: pointer;
+            font-size: 25px;
+            color: #ffffff;
+        }
+        ul{
+            margin-right: 0px;
+            float: left;
+            li{
+                display: block;
+                width: 100%;
+                position: relative;
+                a{
+                    &:hover{
+                        color: cyan;
+                        box-shadow: none;
+                    }
+                }
+                .show{
+                    display: block;
+                    color: #ffffff;
+                    font-size: 20px;
+                    padding: 8px 15px;
+                    cursor: pointer;
+                    &:hover{
+                        color: cyan;
+                    }
+                }
+                ul{
+                    position: static;
+                    top: 50px;
+                    float: none;
+                    display: none;
+                    opacity: 1;
+                    visibility: visible;
+                    li{
+                        padding-left: 40px;
+                        border-bottom: none;
+                        display: block;
+                        width: 100%;
+                        ul{
+                            visibility: visible;
+                            li{
+                                position: static;
+                                left: 60px;
+                            }
+                        }
+                       
+                    }
+                }
+                
+            }
+        }
+
+        // .show + a : là dùng để ẩn 2 thẻ a gần nhất liên tiếp 
+        // class = "show" và thẻ ul là cùng cấp với nên ẩn luôn
+        .show + a,ul {
+            display: none;
+        }
+
+        [id^=btn]:checked + ul{
+            display: block;
+        }
+        
+        
+    }
+}

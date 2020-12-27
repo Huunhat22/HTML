@@ -1,0 +1,177 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(../hinhanh/eiffel.jpg) no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+
+nav::after {
+  clear: both;
+  float: left;
+  display: table;
+  content: '';
+}
+
+nav .logo {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 70px;
+  margin-left: 50px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 50px;
+  position: relative;
+  top: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px 15px;
+  line-height: 40px;
+}
+
+nav ul li a:hover {
+  color: cyan;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
+          box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 50px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav ul li ul li {
+  position: relative;
+  width: 150px;
+  margin: 0;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid cyan;
+}
+
+nav ul li ul li a .fa {
+  margin-left: 25px;
+}
+
+nav ul li ul li ul {
+  visibility: hidden;
+}
+
+nav ul li ul li ul li {
+  opacity: 1;
+  position: relative;
+  left: 150px;
+  top: -40px;
+}
+
+nav ul li:hover > ul {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 40px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li:hover > ul li:hover > a {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: cyan;
+}
+
+nav ul li:hover > ul li:hover > a .fa {
+  color: cyan;
+}
+
+.show, .icon, input {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav .logo {
+    margin-left: 20px;
+    width: 100%;
+  }
+  nav .icon {
+    line-height: 70px;
+    display: block;
+    right: 40px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 25px;
+    color: #ffffff;
+  }
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  nav ul li a:hover {
+    color: cyan;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  nav ul li .show {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  nav ul li .show:hover {
+    color: cyan;
+  }
+  nav ul li ul {
+    position: static;
+    top: 50px;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul li ul li {
+    padding-left: 40px;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+  nav ul li ul li ul {
+    visibility: visible;
+  }
+  nav ul li ul li ul li {
+    position: static;
+    left: 60px;
+  }
+  nav .show + a, nav ul {
+    display: none;
+  }
+  nav [id^=btn]:checked + ul {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Navigation_Bar.css.map */

@@ -1,0 +1,184 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins',sans-serif;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#6bee5a), color-stop(#fff), to(#fff));
+  background-image: linear-gradient(to right top, #6bee5a, #fff, #fff);
+  background-repeat: no-repeat;
+}
+
+.wraper {
+  height: calc(100vh - 3rem);
+  max-width: 1210px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wraper__flex {
+  width: calc(50% - 15px);
+}
+
+.wraper__image {
+  width: 100%;
+}
+
+.wraper__login {
+  text-align: center;
+  width: 40rem;
+}
+
+.wraper__avata {
+  width: 12rem;
+  margin-bottom: 3rem;
+}
+
+.wraper h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.wraper__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  padding: .5rem 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.wraper__input:nth-child(odd) {
+  margin-bottom: 2.5rem;
+}
+
+.wraper__input:nth-child(even) {
+  margin-bottom: 1rem;
+}
+
+.wraper__input:focus-within > i {
+  color: #38d39f;
+}
+
+.wraper__input::before, .wraper__input::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #38d39f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.wraper__input::before {
+  right: 50%;
+}
+
+.wraper__input::after {
+  left: 50%;
+}
+
+.wraper__input:focus-within::before, .wraper__input:focus-within::after {
+  width: 50%;
+}
+
+.wraper i {
+  color: #d9d9d9;
+  font-size: 2rem;
+  width: 8%;
+  text-align: start;
+}
+
+.wraper h5 {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+  -webkit-transition: top .3s;
+  transition: top .3s;
+  z-index: -1;
+}
+
+.wraper__text {
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  padding: .5rem;
+  background: transparent;
+}
+
+.wraper__text:focus ~ .wraper__key {
+  top: -5px;
+  font-size: 15px;
+}
+
+.wraper__text:not(:focus):valid ~ .wraper__key {
+  top: -5px;
+  font-size: 15px;
+}
+
+.wraper__forget {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #999;
+  text-decoration: none;
+  margin-left: 26rem;
+  margin-bottom: 1.5rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.wraper__forget:hover {
+  color: #38d39f;
+}
+
+.wraper__submit {
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background: #6bee5a;
+  border-radius: 4rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Style.css.map */

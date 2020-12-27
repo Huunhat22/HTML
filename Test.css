@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+
 .td{
     border: 3px solid red;
 }
@@ -30,3 +40,51 @@
     padding: 5px;
     top: 0;
 }
+
+
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+    height: 5000px;
+
+  }
+  
+  /* Tạo bốn cột bằng nhau nằm cạnh nhau */
+  .column {
+    vertical-align: middle;
+    width: calc(25% - 22.5px);
+    padding: 0 4px;
+    /* position: absolute; */
+    
+  }
+  
+  .column img {
+    margin-top: 8px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+  }
+  
+  /* Bố cục linh hoạt: tạo bố cục 2 cột */
+  @media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  }
+  
+  /* Bố cục linh hoạt: làm cho hai cột xếp chồng lên nhau thay vì cạnh nhau */
+  @media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  }

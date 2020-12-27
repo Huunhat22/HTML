@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins','sans-serif';
+    background-color: rgb(128, 133, 133);
+}
+
+.profile{
+    background-color: #fff;
+    max-width: 50rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    padding: 10rem 3rem;
+    text-align: center;
+    &_avata{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 20rem;
+        width: 20rem;
+        margin: 0 auto 2rem;
+    }
+    &_picture{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 20rem;
+        display: block;
+    }
+    &_status{
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(51, 255, 0);
+        border-radius: 2rem;
+        top: 1.7rem;
+        right: 2rem;
+        border: 2px solid white;
+    }
+    &_name{
+        font-size: 3.4rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    &_desc{
+        font-size: 1.8rem;
+        margin: 0 auto 1.5rem;
+        max-width: 35rem;
+        color:#846565;
+        line-height: 1.6;
+    }
+    &_meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 5rem;
+        &-item{
+            text-align: center;
+        }
+        &-number{
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: rgb(245, 30, 102);
+            margin-bottom: 1rem;
+        }
+        &-follower{
+            font-weight: bold;
+            font-size: 2rem;
+            
+        }
+    }
+    &_action{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+    }
+    &_button{
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        width: calc(50% - 22.5px);
+        border: none;
+        outline: none;
+        color: #fff;
+        transition: box-shadow .5s linear;
+        &--primary{
+            background-color: rgb(61, 61, 243);
+        }
+        &--secondary{
+            background-color: rgb(252, 87, 114);
+        }
+        &:hover{
+            cursor: pointer;
+            &:nth-child(1){
+                box-shadow: -1px 4px 11px 0px rgb(61, 61, 243);
+            }
+            &:nth-child(2){
+                box-shadow: -1px 4px 11px 0px rgb(252, 87, 114);
+            }
+            
+        }
+    }
+
+}

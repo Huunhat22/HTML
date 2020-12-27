@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../hinhanh/eiffel.jpg) no-repeat;
+    
+    height: 100%;
+    background-size: cover;
+}
+
+nav::after{
+    clear: both;
+    float: left;
+    display: table;
+    content: '';
+}
+
+nav{
+    .logo{
+        float: left;
+        color: #ffffff;
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 70px;
+        padding-left: 60px;
+
+    }
+    ul{
+        float: right;
+        list-style: none;
+        margin-right: 40px;
+        position: relative;
+        top: 15px;
+        li{
+            display: inline-block;
+            float: left;
+            // background: #1b1b1b;
+            margin: 0 5px;
+            
+            a{
+                color: #ffffff;
+                text-decoration: none;
+                padding: 8px 15px;
+                font-size: 18px;
+                line-height: 40px;
+                &:hover{
+                    color: cyan;
+                    border-radius: 5px;
+                    box-shadow: 0 0 5px #33ffff,
+                                0 0 5px #66ffff;
+                }
+            }
+            ul{
+                position: absolute;
+                // top: 70px; lúc đầu sử dụng 70px, nhưng sau tăng lên 90px
+                top: 50px;
+                visibility: hidden;
+                opacity: 0;
+                transition: top .3s;
+                // border-top: 3px solid cyan;
+                li{
+                    position: relative;
+                    margin: 0px;
+                    width: 150px;
+                    float: none;
+                    display: list-item;
+                    border-bottom: 1px solid rgba(0,0,0,0.3);
+                    .fa{
+                        margin-left: 40px;
+                    }
+                    ul{
+                        visibility: hidden;
+                        // border-top: none;
+                        li{
+                            position: relative;
+                            top: -40px;
+                            left: 150px;
+
+                        }
+                    }
+                }
+            }
+            &:hover{
+                > ul{
+                    top: 40px;
+                    opacity: 1;
+                    visibility: visible;
+                    li{
+                        box-shadow: none;
+                        color: cyan;
+                        &:hover{
+                            > a{
+                                box-shadow: none;
+                                color: cyan;
+                                .fa{
+                                    color: cyan;
+                                }
+                            }
+                        }
+                    }   
+                }
+                
+            }
+        }
+    }
+}

@@ -44,3 +44,13 @@ grid-row-start và grid-column-start : kết thúc tại line
 [Short hand của grid-column: 1/3] : là begin-end
 [Short hand của grid-row: 1/3] : là begin-end
 
+----------------------------------------------
+độ ưu tiên theo thứ tự từ thấp đến cao:
+- Inherited: thừa kế từ cha
+- *
+- element: tức là viết theo tên thẻ
+- attribute: viết theo dạng thuộc tính []
+- class
+- ID
+- Kết hợp các selector lại
+- Viết inline style

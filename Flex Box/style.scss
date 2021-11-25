@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+}
+
+.cards{
+    display: flex;
+    margin-left: -30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: calc(25% - 30px);
+    margin-left: 30px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+    &_image{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        // flex-shrink: 0;
+    }
+
+    &_content{
+        
+        padding: 25px;
+    }
+
+    &_top{
+        
+    }
+
+    &_title{
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &_user{
+        display: flex;
+        align-items: center;
+
+        &-avata{
+            height: 40px;
+            width: 40px;
+            border-radius: 100rem;
+            object-fit: cover;
+            // cố định , để không bị scale lại
+            flex-shrink: 0;
+        }
+
+        &-info{
+            padding-left: 20px;
+            // để lấy hết khoảng trống còn lại
+            flex: 1;
+        }
+
+        &-top{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    }
+}

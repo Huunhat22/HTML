@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+// đặt biến để tái sử dụng
+$spacing: 30px;
+$colum: 4;
+
+.cards {
+  display: flex;
+  margin-left: calc(-1 * #{$spacing});
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  width: calc(calc(100% / #{$colum}) - #{$spacing});
+  margin-left: $spacing;
+
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &_image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &_top {
+    padding: 25px;
+  }
+
+  &_bottom {
+    padding: 25px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_title {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &_user {
+    display: flex;
+    align-items: center;
+
+    &-avata {
+      height: 40px;
+      width: 40px;
+      border-radius: 100rem;
+      object-fit: cover;
+      // cố định , để không bị scale lại
+      flex-shrink: 0;
+    }
+
+    &-info {
+      padding-left: 20px;
+      // để lấy hết khoảng trống còn lại
+      flex: 1;
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5x;
+
+      & > ion-icon {
+        color: #49ff00;
+        margin-left: 5px;
+      }
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    &-game {
+      color: #999;
+      line-height: 1;
+      font-weight: 300;
+    }
+  }
+
+  &_live {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #ff6651;
+
+    & > span {
+      margin-left: 10px;
+    }
+  }
+
+  &_watching {
+    position: relative;
+    color: #999;
+    font-size: 14px;
+
+    font-weight: 600;
+    padding-left: 14px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      transform: translateY(-50%);
+
+      top: 50%;
+      left: 0;
+      height: 8px;
+      width: 8px;
+
+      background-color: #0f2c67;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+}
+
+// xử lý khi card_title dài quá thì card_content lấy của các item nó không đều nhau
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &_image {
+    flex-shrink: 0;
+  }
+
+  &_content {
+    flex: 1;
+  }
+}
+
+// xử lý card_bottom chưa bằng nhau -> luôn nằm dưới cuối
+.card {
+  &_content {
+    display: flex;
+    flex-direction: column;
+  }
+  &_bottom {
+    margin-top: auto;
+  }
+}
+
+// xử lý card_user chưa bằng nhau
+.card {
+  &_top {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &_user {
+    margin-top: auto;
+  }
+}
+
+// xử lý trường hợp card_title dài quá hoặc dính liền, hoặc quy định số dòng
+.card {
+  &_title {
+    word-break: break-all;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; //đây là số dòng
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: clip;
+    word-break: break-word;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  $colum: 2;
+}
+
+@media screen and (max-width: 767px) {
+  $spacing: 15px;
+  $colum: 1;
+}

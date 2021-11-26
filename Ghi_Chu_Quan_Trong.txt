@@ -44,6 +44,7 @@ grid-row-start và grid-column-start : kết thúc tại line
 [Short hand của grid-column: 1/3] : là begin-end
 [Short hand của grid-row: 1/3] : là begin-end
 
+
 ----------------------------------------------
 độ ưu tiên theo thứ tự từ thấp đến cao:
 - Inherited: thừa kế từ cha
@@ -54,3 +55,10 @@ grid-row-start và grid-column-start : kết thúc tại line
 - ID
 - Kết hợp các selector lại
 - Viết inline style
+
+--------------------------------------------------
+nếu có max-width đơn vị px và muốn full ảnh. thì ta sẽ có công thức của thử div chứa ảnh như sau:
+width:100vh
+position:relative;
+left: calc(((100vw - max-width)/2)*-1);
+>>>>>>> 52021516cc1d4b3970e77ffb2e70409c035fd0a6

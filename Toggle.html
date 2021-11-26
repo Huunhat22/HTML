@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;600;700;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Poppins',Arial, Helvetica, sans-serif;
+        background-color: #999;
+        transition: background-color .2s linear;
+    }
+    body.dark{
+        background: #292c35;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px solid springgreen;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        border-radius: 2px;
+        padding: 2rem;
+
+    }
+    h1{
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+    .switch{
+        position: relative;
+        display: inline-block;
+        height: 6rem;
+        width: 11rem;
+        margin: 0 1rem;
+    }
+    .switch_cus{
+        position: relative;
+        display: inline-block;
+        height: 6rem;
+        width: 11rem;
+        margin: 0 1rem;
+        background-color: #ccc;
+        border-radius: 34px;
+        cursor: pointer;
+    }
+    .checkbox{
+        opacity: 0;
+        
+    }
+    .fas{
+        position: absolute;
+        font-size: 3.8rem;
+    }
+    .fa-moon{
+        bottom: 9px;
+        left: 7px;
+        color: #f1c40f;
+    }
+    .fa-sun{
+        bottom: 9px;
+        left: 6rem;
+        color: #f39c12;
+    }
+
+    .ball{
+        position: absolute;
+        background-color: #fff;
+        left: 7px;
+        bottom: 7px;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        transition:transform .2s linear;
+    }
+    .checkbox:checked ~ .ball{
+        transform: translateX(50px);
+    }
+
+    .slider{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 34px;
+        transition: .4s;
+    }
+    /* .switch input{
+        display: none;
+    } */
+    .slider:before{
+        position: absolute;
+        content: "";
+        height: 4.5rem;
+        width: 4.5rem;
+        left: 7px;
+        bottom: 7px;
+        background-color: #fff;
+        transition: 0.4s;
+        border-radius: 50px;
+    } 
+    input:checked + .slider{
+        background-color:springgreen;
+    }
+
+    input:checked + .slider::before{
+        transform: translateX(50px);
+    }
+</style>
+<body>                
+    
+    <div class="container">
+        <h1>Toggle Switch</h1>
+        <div class="container_items">
+            
+            <label class="switch_cus" for="check">
+                <input type="checkbox" id="check" class="checkbox">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+        const chk = document.getElementById('check');
+
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>

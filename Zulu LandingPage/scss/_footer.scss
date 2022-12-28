@@ -1,0 +1,72 @@
+
+// style for secsion footer
+
+.footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    column-gap: 20px;
+
+    padding-bottom: 80px;
+
+    &__slogan{
+        margin: 45px 0 38px 0;
+        max-width: 250px;
+        line-height: 1.5;
+        font-size: 15px;
+        color: $gray-dark;
+    }
+
+    &__social{
+        display: inline-flex;
+
+        &-link{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            color: #fff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    }
+
+    &__heading{
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    &__link{
+        display: inline-block;
+        color: $gray-dark;
+        font-size: 14px;
+
+        &-item{
+            margin-bottom: 30px;
+        }
+    }
+
+    //style for responsive
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap:30px 50px;
+      }
+}
+
+.bg{
+    &__google{
+        background-color: $pink;
+    }
+
+    &__twitter{
+        background-color: $blue-light;
+    }
+
+    &__insta{
+        background-color: $organ-light;
+    }
+}

@@ -1,0 +1,132 @@
+
+// Style for header
+.header{
+    display: flex;
+    align-items: center;
+    padding-top: 44px;
+
+    &__logo{
+        margin-right: 125px;
+    }
+
+    &__menu{
+    
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        // &--item{
+        //     display: inline-block;
+        // }
+        &--item:not(:last-child){
+            margin-right: 75px;
+        }
+        &--link{
+            color: $gray-dark;
+            transition: color 0.2s ease-in-out;
+        }
+        &--link:hover{
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+    &__auth{
+        margin-left: auto;
+    }
+
+
+    // Responsive
+    @media screen and (max-width: 1023px){
+        &__logo{
+            margin-right: 0;
+        }
+
+        &__menu{
+            margin: 0 auto;
+        }
+
+        &__auth{
+            margin-left: 0;
+        }
+
+    }
+
+    @media screen and (max-width:819px){
+        &__menu{
+            &--item:not(:last-child){
+                margin-right: 45px;
+            }
+        }
+
+        &__auth{
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width:767px){
+        padding-top: 30px;
+
+        &__menu{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 90%;
+
+            max-width: 315px;
+            background-color: white;
+            z-index: 9999;
+            bottom: 0;
+
+            border-left: 1px solid $gray-light;
+            display: block;
+            padding: 50px 15px;
+
+            transform: translateX(100%);
+            transition: transform 0.2s linear;
+
+            &--item:not(:last-child){
+                margin-right: 0;
+            }
+
+            &--link{
+                display: block;
+                padding: 20px 10px;
+                border-radius: 4px;
+
+                &:hover{
+                    color: #fff;
+                    background-color: $primary-color;
+                }
+            }
+
+            &.is-active{
+                transform: translateX(0);
+                transition: transform 0.2s linear;
+            }
+        }
+
+        &__auth{
+            margin-left: auto;
+        }
+
+        &__logo{
+            &--image{
+                max-width: 90px;
+            }
+        }
+
+        .menu__toggle{
+            font-size: 20px;
+            margin-left: 15px;
+            color: $pink;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .menu__toggle{
+            display: none;
+        }
+    }
+   
+}

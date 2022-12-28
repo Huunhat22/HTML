@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color: white;
+    color: $gray-dark;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 1175px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+// style for  button
+.button{
+    display: inline-block;
+    border: 0;
+    padding: 20px 40px;
+    border-radius: 12px;
+    
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: $gray-dark;
+
+    &--primary{
+        background-color: $primary-color;
+        color: $gray-light;
+        border: 1px transparent solid;
+    }
+
+    &--outline{
+      border: 1px solid $gray;
+      color: $gray-blur;
+    }
+
+    &--modify{
+      padding: 20px 25px;
+    }
+
+}
+
+.text{
+  font-size: 14px;
+  line-height: 1.5;
+  color: $gray;
+  font-weight: 300;
+}
+
+.section{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 85px;
+
+  &--modify{
+    text-align: start;
+  }
+}
+
+.section__description{
+  display: inline-block;
+  
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 0 10px;
+
+  color: $gray;
+  font-weight: 400;
+
+  &::before,&::after{
+    content: "";
+    top:50%;
+    position: absolute;    
+    
+    background-color: $primary-color;
+    height: 2px;
+    width: 20px;
+  }
+  
+  &::before{
+    left: 0;
+    transform: translateX(-100%) translateY(-50%);
+  }
+
+  &::after{
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+  
+  &--left{
+    padding-left:30px;
+  }
+  &--left::before{
+    transform: translateY(-50%);
+  }
+  &--left::after{
+    display: none;
+  }
+}
+
+
+
+.section__caption{
+  font-size: 43px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  & > span{
+    display: block;
+  }
+}
+
+
+
+@media screen and (max-width: 1023px) {
+  .button{
+    padding: 15px 25px;
+  }
+  
+  .section{
+    margin-bottom: 45px;
+  }
+  .section__caption{
+    font-size: 30px;
+  }
+
+  .section__description{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button{
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+}

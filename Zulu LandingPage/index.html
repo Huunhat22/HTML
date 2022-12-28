@@ -5,13 +5,348 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zuly Landing Page</title>
-    <link rel="stylesheet" href="Style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="scss/Style.css"/>
+    
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptatibus distinctio quidem sequi facilis voluptas, libero adipisci tempora? Itaque reiciendis dolores beatae obcaecati? Officia perferendis, atque fugit suscipit totam doloremque?
+            <header class="header">
+                <a href="index.html" class="header__logo">
+                    <img src="images/logo.png" alt="" class="header__logo--image">
+                </a>
+                <ul class="header__menu">
+                    <li class="header__menu--item"><a href="#" class="header__menu--link">Home</a></li>
+                    <li class="header__menu--item"><a href="#" class="header__menu--link">Product</a></li>
+                    <li class="header__menu--item"><a href="#" class="header__menu--link">Pricing</a></li>
+                    <li class="header__menu--item"><a href="#" class="header__menu--link">About</a></li>
+                </ul>
+                <div class="header__auth">
+                    <a href="" class="button">Login</a>
+                    <a href="" class="button button--primary">Sign up</a>
+                </div>
+                <i class="fa fa-bars menu__toggle"></i>
+            </header>
+            <section class="hero">
+                <div class="hero__left">
+                    <h1 class="hero__title">
+                        <span>Make a</span>
+                        <span>big impact</span>
+                        <span>with exciting</span>
+                        <span>videos</span>
+                    </h1>
+                    
+                    <p class="hero__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    
+                    <div class="hero__link">
+                        <a href="#" class="button button--primary button--modify">Get started</a>
+                        <a href="#" class="button button--outline">How it works?</a>
+                    </div>
+                </div>
+                <img src="images/img1.png" alt="" class="hero__right">
+            </section>
+            <section class="walk">
+                <div class="section">
+                    <span class="section__description">walk-through</span>
+                    <h2 class="section__caption">
+                        <span>How does</span>
+                        <span>Zulu works?</span>
+                    </h2>
+                </div>
+                <div class="walk__list">
+                    <div class="walk__item">
+                        <img src="images/img2.png" alt="" class="walk__image">
+                        <h5 class="walk__title">Offer the best viewing experience</h5>
+                        <p class="walk__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, fuga vero quos iure ad consectetur veritatis veniam quis omnis</p>
+                        <a href="#" class="button button--outline walk--more">Learn more</a>
+                    </div>
+                    <div class="walk__item">
+                        <img src="images/img3.png" alt="" class="walk__image">
+                        <h5 class="walk__title">Develop an audience and a brand</h5>
+                        <p class="walk__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, fuga vero quos iure ad consectetur veritatis veniam quis omnis</p>
+                        <a href="#" class="button button--outline walk--more">Learn more</a>
+                    </div>
+                    <div class="walk__item">
+                        <img src="images/img4.png" alt="" class="walk__image">
+                        <h5 class="walk__title">Turn your videos into a marketing goldmine</h5>
+                        <p class="walk__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, fuga vero quos iure ad consectetur veritatis veniam quis omnis</p>
+                        <a href="#" class="button button--outline walk--more">Learn more</a>
+                    </div>
+                </div>
+            </section>
+            <section class="studio">
+                <div class="studio__content">
+                    <span class="section__description section__description--left">zulu studio</span>
+                        <h2 class="section__caption">
+                            <span>From our</span>
+                            <span>studio to your</span>
+                            <span>screen</span>
+                        </h2>
+                    <p class="studio__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ratione magni quos, molestiae nemo fugiat optio error quo facilis voluptatibus rem veritatis ullam! Ab dolorem cupiditate quidem itaque provident iste.</p>
+                    <a href="#" class="button button--primary">Explore more</a>
+                </div>
+                <img src="images/img5.png" alt="" class="studio__image">
+            </section>
+            <section class="price">
+                <div class="section">
+                    <span class="section__description">pricing</span>
+                    <h2 class="section__caption">
+                        <span>Select the</span>
+                        <span>perfect plan</span>
+                    </h2>
+                </div>
+                <div class="price__list">
+                    <div class="price__item">
+                        <h3 class="price__title">Basic</h3>
+                        <h4 class="price__price">
+                            <sup class="price__symbol">$</sup>
+                            <span class="price__month">9</span>
+                            <span>/Month</span>
+                        </h4>
+                        <p class="text price__description">Beautifuly simple project planning</p>
+                        <h3 class="price__feature">Feature</h3>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">7 HD720 videos per month</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">up to 5-minute videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Access to 200k stock videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">50+ commercial music tracks</span>
+                        </div>
+                        <a href="#" class="button button--outline price__start">start now</a>
+                    </div>
+                    <div class="price__item">
+                        <span class="price__sticky">Most Popular</span>
+                        <h3 class="price__title">Basic</h3>
+                        <h4 class="price__price">
+                            <sup class="price__symbol">$</sup>
+                            <span class="price__month">29</span>
+                            <span>/Month</span>
+                        </h4>
+                        <p class="text price__description">Beautifuly simple project planning</p>
+                        <h3 class="price__feature">Feature</h3>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">18 HD720 videos per month</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Up to 15-minute videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Access to 500k+ Stock videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">100+ commercial music tracks</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">No wataermarks on HD videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">1 font upload</span>
+                        </div>
+                        <a href="#" class="button button--outline price__start">start now</a>
+                    </div>
+                    <div class="price__item">
+                        <h3 class="price__title">Basic</h3>
+                        <h4 class="price__price">
+                            <sup class="price__symbol">$</sup>
+                            <span class="price__month">49</span>
+                            <span>/Month</span>
+                        </h4>
+                        <p class="text price__description">Beautifuly simple project planning</p>
+                        <h3 class="price__feature">Feature</h3>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Unlimited HD videos per month</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Up to 60 - munute videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Access to 500k+ Stock videos</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">200+ commercial music tracks</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">No watermarks on anything</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">Reseller license</span>
+                        </div>
+                        <div class="price__feature_item">
+                            <i class="fa fa-check-circle price__feature_icon"></i>
+                            <span class="price__feature_title">10 font uploads</span>
+                        </div>
+                        <a href="#" class="button button--outline price__start">start now</a>
+                    </div>
+                </div>
+            </section>
+            <section class="client">
+                <div class="section">
+                    <span class="section__description">what people say</span>
+                    <h2 class="section__caption">
+                        <span>Our honorable</span>
+                        <span>clients</span>
+                    </h2>
+                </div>
+                <div class="client__list">
+                    <div class="client__item">
+                        <img src="images/chris evans.jpg" alt="" class="client__avata">
+                        <h3 class="client__name">Edwin Reyes</h3>
+                        <span class="client__position">Bussinesman</span>
+                        <p class="client__comment">"I have loved that it's giving me the opportunity to learn at my own pace and it's also super cost effective!"</p>
+                        <div class="client__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client__item">
+                        <img src="images/man1.jpg" alt="" class="client__avata">
+                        <h3 class="client__name">Charlie Burns</h3>
+                        <span class="client__position">Maketing Head</span>
+                        <p class="client__comment">"I have loved that it's giving me the opportunity to learn at my own pace and it's also super cost effective.
+                            I have loved that it's giving me the opportunity to learn at my own pace."</p>
+                        <div class="client__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                    </div>
+                    <div class="client__item">
+                        <img src="images/man3.jfif" alt="" class="client__avata">
+                        <h3 class="client__name">Morgan Turner</h3>
+                        <span class="client__position">Bussinesman</span>
+                        <p class="client__comment">"I have loved that it's giving me the opportunity to learn at my own pace and it's also super cost effective!"</p>
+                        <div class="client__stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="start">
+                <img src="images/img6.png" alt="" class="start__img6">
+                <img src="images/img7.png" alt="" class="start__img7">
+                <span class="section__description">zulu studio</span>
+                <h2 class="section__caption">
+                    <span>Get started with</span>
+                    <span>Zulu today</span>
+                </h2>
+                <div class="start__content">
+                    <p class="start__slogan">let's work together to create a fantastic product</p>
+                    <a href="#" class="button button--primary">Get started</a>
+                </div>
+            </section>
+            <section class="footer">
+                <div class="footer__column">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="" class="logo__image">
+                    </a>
+                    <p class="footer__slogan">let's work together to create a fantastic product</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link bg__google">
+                            <i class="fa fa-google"></i>
+                        </a>
+                        <a href="#" class="footer__social-link bg__twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link bg__insta">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Product</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Landing Page</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Futures</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Documentation</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Referal Program</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Pricing</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Services</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Documentation</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Design</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Themes</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Illustrations</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">UI kit</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Company</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">About</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Pravicy Policy</a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#" class="footer__link">Careers</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>

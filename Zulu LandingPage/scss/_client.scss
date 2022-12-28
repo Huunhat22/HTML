@@ -1,0 +1,120 @@
+
+//style for section client
+
+.client{
+    padding-top: 16px;
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: calc(33.33% - 46.67px);
+        padding: 42px 20px;
+        border: 1px solid #eee;
+        border-radius: 15px;
+        transition: all 0.2s linear;
+
+    }
+
+    &__avata{
+        height: 115px;
+        width: 115px;
+        object-fit: cover;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+    }
+
+    &__name{
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    &__position{
+        font-size: 14px;
+        color: $gray;
+        margin-bottom: 26px;
+    }
+
+    &__comment{
+        padding-top: 24px;
+        margin-bottom: 34px;
+        border-top: 1px solid #eee;
+        text-align: center;
+
+        font-size: 13px;
+        line-height: 1.4;
+        color: $gray;
+    }
+
+    &__stars{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $yellow;
+        margin: auto auto 0;
+
+        i {
+            margin: 0 5px;
+            color: $yellow;
+            font-size: 20px;
+          }
+    }
+
+
+    //style for responsive
+
+    @media (hover: hover) {
+        &__item{
+
+            &:hover{
+                box-shadow: 0 0 40px 10px rgba(black, 0.03);
+                cursor: pointer;
+            }
+        }
+    
+    }
+
+    @media screen and (max-width:1023px) {
+        &__list{
+            display: grid;
+            justify-content: flex-start;
+            grid-auto-columns: 400px;
+            grid-auto-flow: column;
+
+            column-gap: 30px;
+            overflow: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            -webkit-overflow-scrolling: touch;
+            scroll-padding: 1rem;
+            grid-template-columns: unset;
+            
+            &::-webkit-scrollbar{
+                display: none;
+                width: 0;
+            }
+
+            & > *{
+                scroll-snap-align: start;
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        &__list{
+            grid-auto-columns: 85%;
+        }
+    }
+}

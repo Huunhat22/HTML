@@ -1,0 +1,207 @@
+.hero{
+    background-color: $green;
+    margin-bottom: 70px;
+    &__wrapper{
+        padding: 92px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left,&__right{
+        width: 50%;
+    }
+
+    &__left{
+        display: flex;
+        
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-right: 133px;
+    }
+
+    &__title{
+        color: $mint;
+        font-family: 'Chillax', sans-serif;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 72px;
+        margin-bottom: 32px;
+    }
+
+    &__text{
+        line-height: 28px;
+        margin-bottom: 32px;
+    }
+
+    &__action{
+        display: flex;
+        align-items: center;
+    }
+
+    &__btnShop{
+        padding: 19px 41px;
+        color: $green;
+        background-color: $mint;
+    }
+
+    &__btnExplore{
+        margin-left: 43px;
+        margin-right: 16px;
+    }
+
+    &__right{
+        display: grid;
+        
+        // grid-template-columns: 223px 380px;
+        grid-template-columns: 3fr 4fr;
+        gap: 4px;
+    }
+
+    &__item{
+        display: block;
+        position: relative;
+        z-index: 1;
+        // & > a{
+        //     display: block;
+        // }
+    }
+
+    &__tag{
+        position: absolute;
+        top: 12px;
+        left: 15px;
+
+        font-size: 12px;
+        padding: 7px 15px;
+        background-color: $green;
+        color: $mint;
+    }
+
+    &__pattern{
+        position: absolute;
+        z-index: -1;
+        bottom: -35px;
+        left: -35px;
+    }
+
+    &__picture{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width:1239px) {
+        &__wrapper{
+            padding: 60px 0;
+        }
+
+        &__title{
+            font-size: 55px;
+            line-height: 1.2;
+        }
+    }
+
+    @media screen and (max-width:1023px) {
+        &__left{
+            padding-right: 60px;
+        }
+
+        &__btnShop{
+            padding: 17px;
+        }
+
+        &__btnExplore{
+            margin-left: 23px;
+        }
+    }
+
+    @media screen and (max-width:767px){
+        &__wrapper{
+            flex-direction: column-reverse;
+            padding: 30px 0 40px;
+        }
+
+        &__left,&__right{
+            width: 100%;
+        }
+
+        &__left{
+            padding-right: 0;
+            margin-top: 60px;
+        }
+
+
+        &__title{
+            line-height: 1;
+        }
+
+        &__btnShop{
+            padding: 17px 60px;
+        }
+
+        &__btnExplore{
+            margin-left: auto
+        }
+    }
+}
+
+.item3{
+    position: relative;
+    grid-column: 2 / span 1;
+    grid-row: 1 /span 2;
+
+    &__more{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        padding: 132px 27px 27px;
+        background: linear-gradient(178.62deg, rgba(46, 64, 61, 0) 25.35%, #234A45 91.06%);
+        
+
+        &--title{
+            font-size: 28px;
+            color: $mint;
+            margin-bottom: 15px;
+        }
+
+        &--desc{
+            line-height: 18px;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+
+            color: $mint;
+            margin-bottom: 18px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+        }
+
+        &--btn{
+            display: block;
+            text-align: center;
+            padding: 17px 0px;
+            color: rgba(0, 79, 68, 1);
+
+            letter-spacing: 3.2px;
+            font-size: 12px;
+            background-color: #fff;
+            text-transform: uppercase;
+        }
+    }
+
+    @media screen  and (max-width:1239px){
+        &__more{
+            // padding: 0;
+
+            &--title{
+                font-size: 25px;
+            }
+            &--btn{
+                padding: 17px 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,225 @@
+.hero{
+    background-color: $siver;
+    padding-bottom: 80px;
+
+    position: relative;
+
+    &__wrapper{
+        display: flex;
+    }
+
+    &__left{
+        max-width: 686px;
+        width: 100%;
+        margin-right: 102px;
+    }
+
+    &__title{
+        font-size: 75px;
+        font-weight: 300;
+        margin-top: 74px;
+        margin-bottom: 52px;
+    }
+
+    &__desc{
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 2;
+        text-transform: capitalize;
+        margin-bottom: 75px;
+    }
+
+    &__button{
+        padding: 21px 26px;
+        background-color: $back-blue;
+        color: $white;
+        font-size: 29px;
+        font-weight: 400;
+        display: inline-block;
+
+        & > ion-icon{
+            vertical-align: bottom;
+        }
+    }
+
+    &__image{
+        position: relative;
+        z-index: 999;
+
+        & > img{
+            border-radius: 160px 0;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            border-radius: 160px 0;
+            top: 14px;
+            left: 14px;
+
+            height: 100%;
+            width: 100%;
+            border: 2px solid $siver-grey;
+            z-index: -1;
+        }
+    }
+
+    &__object1{
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+    }
+
+    &__object2{
+        position: absolute;
+        bottom: 109px;
+        right: 0;
+    }
+
+    @media screen and(max-width:1024px) {
+
+        &__left{
+            margin-right: 70px;
+            max-width: 600px;
+        }
+        &__title{
+            margin: 50px 0;
+            font-size: 60px;
+        }
+
+        &__desc{
+            font-size: 26px;
+            line-height: 1.8;
+            margin-bottom: 60px;
+        }
+
+        &__button{
+            padding: 16px 22px;
+            font-size: 25px;
+        }
+
+        &__image{
+            max-width: 300px;
+        }
+
+        &__object1{
+            left: 0;
+            bottom: 10px;
+        }
+
+        &__object2{
+            bottom: 25px;
+        }
+    }
+
+    @media screen and(max-width:820px){
+        &__left{
+            margin-right: 40px;
+            max-width: 500px;
+        }
+        &__title{
+            margin: 40px 0;
+            font-size: 52px;
+        }
+
+        &__desc{
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        &__button{
+            padding: 10px 16px;
+            font-size: 20px;
+        }
+
+        &__image{
+            max-width: 300px;
+
+            &::before {
+                top: 4px;
+                left: 4px;
+                border-radius: 90px 0;
+            }
+            & > img{
+                border-radius: 90px 0;
+            }
+        }
+
+        &__object1{
+            left: 0;
+            bottom: 10px;
+        }
+
+        &__object2{
+            bottom: 25px;
+        }
+    }
+
+    @media screen and(max-width:768px) {
+
+        &__left{
+            margin-right: 30px;
+        }
+
+        &__title{
+            margin: 35px 0;
+            font-size: 45px;
+        }
+
+        &__desc{
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 45px;
+        }
+
+        &__image{
+            &::before {
+                top: 4px;
+                left: 4px;
+                border-radius: 90px 0;
+            }
+            & > img{
+                border-radius: 90px 0;
+            }
+        }
+        &__button {
+            padding: 12px 18px;
+            font-size: 20px;
+        }
+
+        &__object1{
+            max-width: 60px;
+        }
+
+        &__object2 {
+            bottom: 0px;
+            height: auto;
+            max-width: 100px;
+        }
+    }
+
+    @media screen and(max-width:576px) {
+        &__right{
+            display: none;
+        }
+
+        &__title{
+            margin: 25px 0;
+            font-size: 40px;
+        }
+
+        &__desc{
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        &__button{
+            padding: 10px 14px;
+            font-size: 16px;
+        }
+        &__object2 {
+            bottom: 40px;
+        }
+    }
+}

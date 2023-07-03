@@ -1,0 +1,50 @@
+.search{
+    background-color: $mint-light;
+    margin-bottom: 96px;
+
+    &__wrapper{
+        padding: 85px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__input{
+        flex-grow: 1;
+        margin: 0 15px;
+        padding: 21px;
+        border: 1px solid rgba(0, 79, 68, 1)
+    }
+
+    &__setting{
+        // height: 21px;
+        // width: 21px;
+        font-size: 31px;
+        padding: 13px;
+        background-color: $mint-light;
+        border: 1px solid $green;
+        color: $green;
+    }
+
+    &__button{
+        // height: 21px;
+        // width: 21px;
+        font-size: 31px;
+        padding: 13px;
+        background-color: $green;
+        border: 1px solid transparent;
+        color: $white;
+    }
+
+    @media screen and(max-width:767px) {
+        margin-bottom: 67px;
+    }
+}
+
+input::placeholder{
+    font-family: "Steppe", 'Georgia';
+    color: $green;
+    line-height: 2;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+}

@@ -1,0 +1,297 @@
+.header{
+    background-color: $siver;
+    padding-bottom: 81px;
+    position: relative;
+
+    &__wrapper{
+        position: relative;
+    }
+
+    &__top{
+        padding: 36px 0 25px;
+
+        position: relative;
+    }
+
+    &__logo{
+        text-align: center;
+    }
+
+    &-logo__image{
+        display: inline;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+        border-top: 1px solid $siver-white;
+    }
+
+
+    &__left{
+        position: absolute;
+        top: 42%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &-search__icon{
+        height: 24px;
+        width: 24px;
+        color: $main;
+        display: block;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__search{
+        &--hidden{
+            display: none;
+        }
+    }
+
+    &__bar{
+        display: none;
+        margin-right: 24px;
+    }
+
+    &-bar__icon{
+        display: block;
+        color: $main;
+    }
+
+    &__function{
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        top: 42%;
+        right: 0;
+    }
+
+    &__action{
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: $main;
+
+    }
+
+    &__button:first-child{
+        margin-right: 24px;
+    }
+
+    &-button__icon{
+            height: 24px;
+            width: 24px;
+            vertical-align: sub;
+            color: $main;
+    }
+
+    &__link{
+        font-size: 16px;
+        color: $main;
+    }
+    
+    // block search wrapper
+    &-wrapper{
+        visibility: hidden;
+        background-color: $white;
+        z-index: 999;
+        padding: 25px 15px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &-wrapper--active {
+        visibility: visible;
+    }
+
+    &-search{
+        border: 1px solid $main;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &-input{
+        flex: 1 1 auto;        
+        border: none;
+        width: 100%;
+    }
+
+    &-close-icon{
+        height: 16px;
+        width: 16px;
+        padding: 4px;
+        color: $main;
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &-search-icon{
+        height: 20px;
+        width: 20px;
+        padding: 4px;
+        color: $main;
+    }
+
+
+
+    // responsive
+
+    @media screen and(max-width:1024px){
+        &__link{
+            font-size: 14px;
+        }
+    }
+
+    @media screen and(max-width:820px) {
+        padding-bottom: 60px;
+
+        &__top{
+            padding: 25px 0 25px;
+        }
+
+        &__left{
+            top: 29%;
+        }
+
+        &__function{
+            top: 40%;
+        }
+
+        &-search__icon,&-button__icon{
+            height: 22px;
+            width: 22px;
+        }
+
+        &__menu{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            margin-bottom: 20px;
+            flex: 1 1 auto;
+        }
+    }
+
+    @media screen and(max-width:768px) {
+        padding-bottom: 0;
+        &__menu{
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-color: $white;
+            border: none;
+            border-color: transparent;
+
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px 15px;
+
+            transform: translateX(100%);
+            transition: transform .25s linear;
+
+        }
+
+        &__menu--active{
+
+            transform: translateX(0);
+            transition: transform 0.25s linear;
+        }
+
+        &__item{
+            margin-bottom: 0;
+        }
+
+        &__link{
+            padding: 20px 10px;
+            font-size: 16px;
+            display: block;
+
+            &:hover{
+                background-color: $siver;
+            }
+        }
+
+        &__bar{
+            display: block;
+        }
+
+        &-bar__icon{
+            font-size: 40px;
+        }
+
+        &__function{
+            right: 0;
+        }
+
+        &__button:first-child{
+            margin-right: 20px;
+        }
+
+        &__action{
+          display: none;
+        }
+
+        &-bar__icon{
+            display: block;
+            color: $main;
+        }
+    }
+
+    @media screen and (max-width:576px) {
+        &__top{
+            padding-top: 25px;
+        }
+
+        &__left {
+           top: 24%;
+        }
+
+        &__menu{
+            max-width: 300px;
+        }
+
+        &__bar{
+            margin-right: 20px;
+        }
+
+        &-logo__image{
+            max-height: 25px;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        &__function{
+            top: 33%;
+        }
+
+        &-button__icon{
+            height: 20px;
+            width: 20px;
+        }
+
+        &__search--temp{
+            display: none;
+        }
+    }
+}

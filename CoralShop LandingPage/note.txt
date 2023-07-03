@@ -1,0 +1,14 @@
+wrapper : 1920
+container : 1320
+paddinng 0 15px
+
+=> max-width của container: 1350px
+
+front 
+poppins regular 400
+roboto light 300
+roboto regular 400
+roboto medium 500
+Opensans semiBold 600
+Opensans regular 400
+

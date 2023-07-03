@@ -1,0 +1,99 @@
+.footer{
+    padding: 145px 0 106px;
+    &__wrapper{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    &__slogan{
+        margin: 30px 0 39px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+
+        width: 100%;
+        max-width: 367px;
+        line-height: 2;
+        color: $footer;
+    }
+
+    &__social{
+        display: flex;
+
+        &-link:not(:last-child){
+            margin-right: 36px;
+        }
+
+        &-link > ion-icon{
+            height: 16px;
+            width: 16px;
+            color: $back-main;
+        }
+    }
+
+    &__heading{
+        font-weight: 500;
+        font-size: 16px;
+        max-height: 34px;
+        height: 34px;
+        // margin-bottom: auto;
+    }
+
+    &__column{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list{
+        margin-top: 25px;
+    }
+
+    &__item{
+        margin-bottom: 24px;
+    }
+
+    &__link{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $footer;
+    }
+
+    @media screen  and (max-width:820px){
+        padding: 60px 0 30px;
+    }
+
+    @media screen  and (max-width:768px){
+        padding: 40px 0 40px;
+        
+        &__wrapper{
+            grid-template-columns: 1fr 1fr ;
+        }
+    }
+
+    @media screen  and (max-width:576px){
+        padding: 60px 0 30px;
+
+        &__heading{        
+            font-size: 14px;
+        }
+
+        &__slogan{
+            margin: 20px 0 20px;
+            font-size: 12px;
+        }
+
+        &__list{
+            margin-top: 0;
+        }
+    
+        &__item{
+            margin-bottom: 16px;
+        }
+        
+        &__link{
+            font-size: 12px;
+        }
+    }
+}

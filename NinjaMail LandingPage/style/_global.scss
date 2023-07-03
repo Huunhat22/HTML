@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color: $white-paper;
+}
+
+image{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+  list-style: none;  
+}

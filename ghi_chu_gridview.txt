@@ -1,0 +1,55 @@
+công thức chia cột nhanh trong grid view
+
+đo width của gallary
+tìm phân tử nhỏ nhất và do height width của nó
+đo padding của gallery
+đo gap giữa các phần tử: số gap(px)
+
+width gallary: 1320px
+gap : 24px
+width, height của item nhỏ nhất là 312px
+
+khung của gallery theo width đo được: 1320
+ tính theo width: 1320 - 24px*2 (2 : là vì có 2 gap) - (padding gallery nếu có) = 1272px
+ tính ra colum: 1272 / 312(width của item nhỏ nhất) = 4 cột
+
+khung của gallery theo height đo được: 648
+ tính theo height: 648 - 24px - (padding gallery nếu có) = 624px
+ tính ra row: 624 / 312(height của item nhỏ nhất) = 2 hàng
+
+===> tổng:
+display : grid
+gap: 24px;
+grid-template-columns: repeat(4 , 1fr);
+grid-template-rows: repeat(2 , 1fr);
+
+---------------------------------------------------
+Làm scroll 
+
+&__List{
+            justify-content: flex-start;
+            grid-auto-flow: column;
+            grid-auto-columns: 300px;
+
+            overflow: auto;
+            overflow-y: hidden;
+            gap: 30px;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            scroll-padding: 1rem;
+            grid-template-columns: unset;
+            grid-template-rows: unset;
+
+            &::-webkit-scrollbar{
+                display: none;
+                width: 0;
+            }
+        }
+
+&__item{
+     width: 100%;
+     scroll-snap-align: start;
+}

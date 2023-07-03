@@ -1,0 +1,90 @@
+/* Webfont: Steppe-Regular */
+@font-face {
+    font-family: 'Steppe';
+    src: url('../fonts/Steppe-Regular.woff2') format('woff2'),
+        url('../fonts/Steppe-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+  
+*{
+    box-sizing: border-box;   
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Steppe", Georgia;                                                
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.1px;
+    background-color: $white;
+    color: $mint;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $mint;
+}
+
+ul{
+  list-style: none;  
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 1190px;
+    padding: 0 15px;
+    margin: 0 auto;
+    
+}
+
+.black{
+    background-color: $lib-1;
+}
+
+.pink{
+    background-color: $lib-2;
+}
+
+.siver{
+    background-color: $lib-3;
+}
+
+.brown{
+    background-color: $lib-4;
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+
+    &__name{
+        font-size: 30px;
+        line-height: 48px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: $green;
+    }
+
+    &__link{
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: $green;
+    }
+}

@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 14px;
+    line-height: 1;
+    background-color: $white;
+    overflow-x: hidden;
+    color: $back-main;
+    font-family: 'Roboto', sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 1350px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

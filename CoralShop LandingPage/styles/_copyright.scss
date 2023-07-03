@@ -1,0 +1,54 @@
+.copyright{
+    padding: 14px 0;
+    background-color: $back-blue;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sign{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+
+        & > ion-icon{
+            vertical-align: bottom;
+            color: $white;
+        }
+    }
+
+    &__button{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+
+        border: none;
+        background-color: transparent;
+        color: $white;
+        cursor: pointer;
+    }
+
+    &__up{
+        height: 16px;
+        width: 16px;
+        margin-left: 16px;
+        vertical-align: bottom;
+    }
+
+    @media screen  and (max-width:576px){
+        &__sign{
+            font-size: 12px;
+        }
+
+        &__image{
+            max-width: 150px;
+        }
+
+        &__button{
+            font-size: 11px;
+        }
+    }
+}
